@@ -24,7 +24,7 @@ Overflow is what happens when there is too much content to fit in an element box
 
 ## What is overflow?
 
-Everything in CSS is a box. You can constrain the size of these boxes by assigning values of [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) (or [`inline-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/inline-size) and [`block-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/block-size)). **Overflow happens when there is too much content to fit in a box.** CSS provides various tools to manage overflow. As you go further with CSS layout and writing CSS, you will encounter more overflow situations.
+Everything in CSS is a box. You can constrain the size of these boxes by assigning values of [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width){:target="_blank"} and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height){:target="_blank"} (or [`inline-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/inline-size){:target="_blank"} and [`block-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/block-size)){:target="_blank"}. **Overflow happens when there is too much content to fit in a box.** CSS provides various tools to manage overflow. As you go further with CSS layout and writing CSS, you will encounter more overflow situations.
 
 ## CSS tries to avoid "data loss"
 
@@ -68,7 +68,7 @@ The next two lessons explain different approaches to control sizing in ways that
 
 ## The overflow property
 
-The [`overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow) property helps you manage an element's content overflow. Using this property, you can convey to a browser how it should handle overflow content. The default value of the [`<overflow>`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow_value) value type is `visible`. With this default setting, one can see content when it overflows.
+The [`overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow){:target="_blank"} property helps you manage an element's content overflow. Using this property, you can convey to a browser how it should handle overflow content. The default value of the [`<overflow>`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow_value){:target="_blank"} value type is `visible`. With this default setting, one can see content when it overflows.
 
 To crop content when it overflows, you can set `overflow: hidden`. This does exactly what it says: it hides overflow. Beware that this can make some content invisible. You should only do this if hiding content won't cause problems.
 
@@ -100,7 +100,7 @@ Instead, perhaps you would like to add scrollbars when content overflows? Using 
 </a>
 </p>
 
-In the example above, we only need to scroll on the `y` axis, however we get scrollbars in both axes. To just scroll on the `y` axis, you could use the [`overflow-y`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y) property, setting `overflow-y: scroll`.
+In the example above, we only need to scroll on the `y` axis, however we get scrollbars in both axes. To just scroll on the `y` axis, you could use the [`overflow-y`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y){:target="_blank"} property, setting `overflow-y: scroll`.
 
 <iframe 
             class="EmbedGHLiveSample" 
@@ -114,7 +114,7 @@ In the example above, we only need to scroll on the `y` axis, however we get scr
 </a>
 </p>
 
-You can also enable scrolling along the x-axis by using [`overflow-x`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-x), although this is not a recommended way to accommodate long words! If you have a long word in a small box, consider using the [`word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break) or [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap) property. In addition, some of the methods discussed in [Sizing items in CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) may help you create boxes that scale better with varying amounts of content.
+You can also enable scrolling along the x-axis by using [`overflow-x`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-x){:target="_blank"}, although this is not a recommended way to accommodate long words! If you have a long word in a small box, consider using the [`word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break){:target="_blank"} or [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap){:target="_blank"} property.
 
 <iframe 
             class="EmbedGHLiveSample" 
@@ -150,11 +150,11 @@ If you only want scrollbars to appear when there is more content than can fit in
 
 ## Overflow establishes a Block Formatting Context
 
-When you use the `<overflow>` values `scroll` and `auto`, you create a [**Block Formatting Context** (BFC)](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context). This means that the content of an element box with these `overflow` values acquires a self-contained layout. Content outside such an element box cannot poke into the element box, and nothing from the element box can poke into the surrounding layout. This enables scrolling behavior, as all box content needs to be contained and not overlap to create a consistent scrolling experience.
+When you use the `<overflow>` values `scroll` and `auto`, you create a [**Block Formatting Context** (BFC)](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context){:target="_blank"}. This means that the content of an element box with these `overflow` values acquires a self-contained layout. Content outside such an element box cannot poke into the element box, and nothing from the element box can poke into the surrounding layout. This enables scrolling behavior, as all box content needs to be contained and not overlap to create a consistent scrolling experience.
 
 ## Unwanted overflow in web design
 
-Modern layout methods (described in [CSS layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout)) manage overflow. They largely work without assumptions or dependencies for how much content there will be on a web page.
+Modern layout methods manage overflow. They largely work without assumptions or dependencies for how much content there will be on a web page.
 
 This was not always the norm. In the past, some sites were built with fixed-height containers to align box bottoms. These boxes may otherwise have had no relationship to each other. This was fragile. If you encounter a box where content is overlaying other content on the page in legacy applications, you will now recognize that this happens with overflow. Ideally, you will refactor the layout to not rely on fixed-height containers.
 
@@ -169,4 +169,4 @@ This lesson introduced the concept of overflow. You should understand that defau
 **Content is based on the following sources:**
 
 - **MDN**
-  - [Overflowing Content](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content) [(Permalink)](https://github.com/mdn/content/blob/b2a5f62d66b4e3d71704017d0fab7ad710e68057/files/en-us/learn/css/building_blocks/overflowing_content/index.md)
+  - [Overflowing Content](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content){:target="_blank"} [(Permalink)](https://github.com/mdn/content/blob/b2a5f62d66b4e3d71704017d0fab7ad710e68057/files/en-us/learn/css/building_blocks/overflowing_content/index.md){:target="_blank"}
