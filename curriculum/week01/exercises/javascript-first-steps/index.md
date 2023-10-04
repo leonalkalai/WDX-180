@@ -1,6 +1,8 @@
 # Exercises: JavaScript First Steps
 
-## Largest Number Checker: Create a function that returns the largest number
+---
+
+## 1) Largest Number Checker: Create a function that returns the largest number
 
   Copy and paste the code below in a file named `largest-number.html`, and try to update the JS part:
 
@@ -50,7 +52,7 @@
   - `git commit -m "javascript-largest-number"`
   - `git push`
 
-## Landscape Mode Checker: Create a function that detects landscape mode 
+## 2) Landscape Mode Checker: Create a function that detects landscape mode 
 
   "Page orientation is the way in which a rectangular page is oriented for normal viewing. The two most common types of orientation are portrait and landscape."
 
@@ -78,11 +80,11 @@
   **landscape-mode.js**:
 
   ```js
-  // YOUR CODE HERE >>
   function isLandscape(width, height){
-    return (width > height);
-  }
+  // YOUR CODE HERE >>
+
   // << YOUR CODE HERE
+  }
 
   // Don't worry about the code below. It's just there to test your code above.
 
@@ -109,7 +111,7 @@
   - `git commit -m "javascript-landscape-mode"`
   - `git push`
 
-## Simple Quiz: Create a simple multiple choice game
+## 3) Simple Quiz: Create a simple multiple choice game
 
   In this exercise, you must `prompt` the user for an answer to the following question:
 
@@ -157,18 +159,15 @@
   ```js
   // YOUR CODE HERE >>
   // << YOUR CODE HERE
-
-  // Don't worry about the code below. It's just there to test your code above.
-  // RUNNING & TESTING OUR isLandscape() FUNCTION:
   ```
 
   When you're ready, move the files in the following path `user/week01/exercises/day05/javascript-first-steps/` and run the git commands below to submit your exercise:
 
   - `git add user/week01/exercises/day05/javascript-first-steps/`
-  - `git commit -m "simple_quiz"`
+  - `git commit -m "javascript-simple_quiz"`
   - `git push`
 
-## Schnick-Schnack-Schnuck: Create a simple Rock-Paper-Scissors Game
+## 3) Schnick-Schnack-Schnuck: Create a simple Rock-Paper-Scissors Game
 
   For this exercise, we want you to recreate a simple game of [Rock, Paper, Scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors).
 
@@ -235,7 +234,7 @@
   When you're ready, move the files in the following path `user/week01/exercises/day05/javascript-first-steps/` and run the git commands below to submit your exercise:
 
   - `git add user/week01/exercises/day05/javascript-first-steps/`
-  - `git commit -m "rock-paper-scissors"`
+  - `git commit -m "javascript-rock-paper-scissors"`
   - `git push`
 
 ----
