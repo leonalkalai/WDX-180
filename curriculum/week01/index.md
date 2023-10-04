@@ -210,16 +210,16 @@ Before you dive in, **make sure that you have your notebook** and colored pens b
     - Level: Beginner
     - Captions: Yes
 
-  - [Read:**How the web works**](resources/How_the_web_works/INDEX.md)
+  - [Read:**How the web works**](resources/How_the_web_works/index.md)
     - Level: Beginner
 
-  - [Read: **What is a web server?**](resources/What_is_a_web_server/INDEX.md)
+  - [Read: **What is a web server?**](resources/What_is_a_web_server/index.md)
     - Level: Beginner
 
-  - [Read: **What is a URL?**](resources/What_is_a_URL/INDEX.md)
+  - [Read: **What is a URL?**](resources/What_is_a_URL/index.md)
     - Level: Beginner
 
-  - [Read: **What is a Domain Name?**](resources/What_is_a_Domain_Name/INDEX.md)
+  - [Read: **What is a Domain Name?**](resources/What_is_a_Domain_Name/index.md)
     - Level: Beginner
 
   - [Watch: **What is Localhost? \| Explained**](https://www.youtube.com/watch?v=m98GX51T5dI){:target="_blank"}
@@ -250,7 +250,7 @@ Before you dive in, **make sure that you have your notebook** and colored pens b
 
   ---
 
-  - [Take the test: **Absolute vs Relative URLs**](exercises/Absolute_vs_Relative_URLs/INDEX.md)
+  - [Take the test: **Absolute vs Relative URLs**](exercises/Absolute_vs_Relative_URLs/index.md)
     - Level: Beginner
 
   - [Watch: **How a web browser builds and displays a web page**](https://www.youtube.com/watch?v=DuSURHrZG6I){:target="_blank"}
@@ -832,6 +832,8 @@ Apart from creating HTML content and styling it with CSS, you also have some ins
   - ***"Never be afraid to mess around and experiment."***
 
 ### Exercises
+
+  - Try to solve all the exercises found [here](./exercises/javascript-first-steps/index.md)
 
   Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheets are found in the `/user/weekXX/progress` folder, for example `user/week01/progress/progress.draft.w01.d01.csv`. You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](resources/PROGRESS-WORKFLOW.md).
   
