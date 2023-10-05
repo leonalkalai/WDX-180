@@ -1,0 +1,27 @@
+# name: "Tests: for WeekXX DayXX"
+name: "Tests: for Week01 Day05"
+
+on: push
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    # Trigger word 'javascript-largest-number'
+    if: contains(github.event.head_commit.message, 'javascript-largest-number')
+    # CHANGE [[TRIGGER-COMMIT-KEYWORD]]
+    # if: contains(github.event.head_commit.message, '[[TRIGGER-COMMIT-KEYWORD]]')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests
+        run: node curriculum/week01/exercises/javascript-first-steps/tests/largest-number.test.js
+        # CHANGE PATH:
+        # run: node curriculum/weekXX/exercises/[[EXERCISE-SLUG]]/tests/[[EXERCISE]].test.js
