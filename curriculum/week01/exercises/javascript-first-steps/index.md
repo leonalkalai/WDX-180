@@ -98,10 +98,10 @@
   console.assert( typeof isLandscape === "function", "Expecting isLandscape to be a function" );
 
   const checkWidthHeight1 = isLandscape(800, 600);
-  console.log('Landscape:',checkWidthHeight1); 
+  console.log('Landscape:',checkWidthHeight1); // Should be true
 
   const checkWidthHeight2 = isLandscape(600, 800);
-  console.log('Landscape:',checkWidthHeight2); // Should be true
+  console.log('Landscape:',checkWidthHeight2); // Should be false
 
   const checkWidthHeight3 = isLandscape(1024, 768);
   console.log('Landscape:',checkWidthHeight3); // Should be true
