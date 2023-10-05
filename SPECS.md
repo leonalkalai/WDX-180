@@ -70,11 +70,17 @@
   },
   ```
 
+### Jekyll | How to | Prevent build on GitHub Pages
+
+  Just include a `.nojekyll` file in the repo.
+
 ---
 
 ## About the `npm run learn` platform 
 
   This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+  The Next.js project (now) lives inside the npm-run-learn branch
 
   The following files and folders are part of the **Next.js** Application:
 
