@@ -42,7 +42,7 @@ _(Updated: 18/09/2023)_
     - Select `View > Options > Change folder and search options`
     - Select the `View` tab and, in `Advanced settings`, select `Show hidden files, folders, and drives` and OK.
   - **References:**
-    - [View hidden files and folders in Windows](https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5)
+    - [View hidden files and folders in Windows](https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5){:target="_blank"}
 
   ---
 
@@ -56,21 +56,21 @@ _(Updated: 18/09/2023)_
 
   The same goes, of course, for the data that you exchange with **GitHub**. In order to open up a secure connection with **GitHub** and be able to download (`git pull`) or upload (`git push`) data, we can use the **SSH** protocol along with a pair of keys to lock and unlock data going back and forth.
 
-  > [About SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh): "SSH, which stands for Secure Shell, is a protocol used to open up a secure communication channel between computers. Using the SSH protocol, you can connect and authenticate to remote servers and services. With SSH keys, you can connect to GitHub without supplying your username and personal access token at each visit."
+  > [About SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh){:target="_blank"}: "SSH, which stands for Secure Shell, is a protocol used to open up a secure communication channel between computers. Using the SSH protocol, you can connect and authenticate to remote servers and services. With SSH keys, you can connect to GitHub without supplying your username and personal access token at each visit."
 
   - **Set up SSH keys for GitHub.** Complete the following 4 steps in order to be able to access GitHub without using a username and password.
 
-  1. [**Set up SSH keys for GitHub**](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+  1. [**Set up SSH keys for GitHub**](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent){:target="_blank"}
 
-  2. [**Check for SSH keys**](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)
+  2. [**Check for SSH keys**](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys){:target="_blank"}
 
-  3. [**Add SSH keys to your GitHub account**](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+  3. [**Add SSH keys to your GitHub account**](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account){:target="_blank"}
 
-  4. [**Test your SSH connection**](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
+  4. [**Test your SSH connection**](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection){:target="_blank"}
 
   **TASK: Set up SSH keys for GitHub**. Once you have successfully completed all 4 steps, make sure to update your [progress sheet](../../user/progress.draft.60.csv) and mark the ` Set up SSH keys for GitHub` task as completed by switching the COMPLETED column from `FALSE` to `TRUE`.
 
-  - [Watch: **Git Tutorial For Dummies**](https://www.youtube.com/watch?v=mJ-qvsxPHpY)
+  - [Watch: **Git Tutorial For Dummies**](https://www.youtube.com/watch?v=mJ-qvsxPHpY){:target="_blank"}
     - **Notes**: Make sure to **follow along** and run the git commands on your own repo. ⚠️ **IMPORTANT:** The repository you will create under your GitHub account, **must be named: `gitVideo`**.
     - **Duration**: 20min 
     - **Level**: Beginner
@@ -104,7 +104,7 @@ _(Updated: 18/09/2023)_
 
   **Repetitio est mater studiorum:** "Repetition is the mother of learning". Let's recap those git concepts by revisiting them through another (longer) and more in-depth video about Git. 
 
-  - [Watch: **Git and GitHub for Beginners - Crash Course**](https://www.youtube.com/watch?v=RGOj5yH7evk)
+  - [Watch: **Git and GitHub for Beginners - Crash Course**](https://www.youtube.com/watch?v=RGOj5yH7evk){:target="_blank"}
     - **Duration**: 69min
     - **Level**: Beginner
     - <details>
@@ -191,8 +191,8 @@ _(Updated: 18/09/2023)_
     - Exercises: 
       - Make sure to complete all the **Active learning** sections along with the 3 Tasks found under the 'Test your skills!' section of the tutorial and submit your code under the `user/week02/exercises/day02/html_text_fundamentals/` folder.
 
-  - [Read: **Creating hyperlinks**](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-    - Description: You already know [**how the hyperlink changed everything**](https://www.youtube.com/watch?v=3Va3oY8pfSI). Now it's time to dive into the more technical aspects of it.
+  - [Read: **Creating hyperlinks**](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks){:target="_blank"}
+    - Description: You already know [**how the hyperlink changed everything**](https://www.youtube.com/watch?v=3Va3oY8pfSI){:target="_blank"}. Now it's time to dive into the more technical aspects of it.
     - What you'll learn:
       - What is a hyperlink?
       - Anatomy of a link
@@ -205,11 +205,11 @@ _(Updated: 18/09/2023)_
       - Email links
     - Exercises:       
       - Make sure to complete all the **Active learning** sections along with the 3 Tasks found under the 'Test your skills!' section of the tutorial and submit your code under the `user/week02/exercises/day02/Creating_hyperlinks/` folder:
-      - [Active learning: creating your own example link](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_your_own_example_link)
-      - [Active learning: creating a navigation menu](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_a_navigation_menu)
-      - [Test your skills: Links (3x Tasks)](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links)
+      - [Active learning: creating your own example link](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_your_own_example_link){:target="_blank"}
+      - [Active learning: creating a navigation menu](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_a_navigation_menu){:target="_blank"}
+      - [Test your skills: Links (3x Tasks)](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links){:target="_blank"}
 
-### Summary
+<!-- ### Summary -->
 
 ### Exercises
 
@@ -220,9 +220,9 @@ _(Updated: 18/09/2023)_
 ### Sources and Attributions
 </details>
 
-<!-- Week 2 - Day 3 | Tables -->
+<!-- Week 2 - Day 3 | HTML Tables -->
 <details markdown="1">
-  <summary><h2>Week 2 - Day 3 | Tables</h2></summary>
+  <summary><h2>Week 2 - Day 3 | HTML Tables</h2></summary>
 
 ### Schedule
 
@@ -260,10 +260,13 @@ _(Updated: 18/09/2023)_
     - **Description:** This article looks at some more advanced features of HTML tables — such as captions/summaries and grouping your rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.
     - **Exercises:** You should place the files related to the exercises found in this module, in the `user/week02/exercises/day03/html_table_basics/` folder.
 
+  - **Exercise: Recreate the table** shown on [this video frame (02:40)](https://www.youtube.com/watch?v=H2kTzmJJ79E&t=159s)
+    - For this exercise, create an HTML file and save it in `user/week02/exercises/day03/bits_and_bytes_table/index.html`
+
   <!-- - [Styling tables](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
     - Description: This article provides a guide to making HTML tables look good, with some specific table styling techniques highlighted. -->
 
-### Summary
+<!-- ### Summary -->
 
 ### Exercises
 
@@ -286,9 +289,9 @@ _(Updated: 18/09/2023)_
 
 </details>
 
-<!-- Week 2 - Day 4 | Forms & Accessibility -->
+<!-- Week 2 - Day 4 | HTML Forms -->
 <details markdown="1">
-  <summary><h2>Week 2 - Day 4 | Forms</h2></summary>
+  <summary><h2>Week 2 - Day 4 | HTML Forms</h2></summary>
 
 ### Schedule
 
@@ -300,14 +303,96 @@ _(Updated: 18/09/2023)_
 
   **What you'll learn:**
 
-  - About HTML Forms
+  - (Almost) all about HTML Forms!
+
+  **Web forms — Working with user data**
+
+  This module provides a series of articles that will help you master the essentials of web forms. Web forms are a very powerful tool for interacting with users — most commonly they are used for collecting data from users, or allowing them to control a user interface. However, for historical and technical reasons, it's not always obvious how to use them to their full potential. In the articles listed below, we'll cover most of the essential aspects of Web forms.
+
+  **Prerequisites**
+
+  - HTML
+
+  **High level overview:**
+
+  ![](./assets/form.01.png)
+
+  ![](./assets/form.02.png)
+
+  **Introductory guides:**
+
+  - [Read: **Your first form**](https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form) and complete all the challenges _(e.g. Active Learning sections, etc.)_.
+    - **Description:** The first article in our series provides you with your very first experience of creating a web form, including designing a simple form, implementing it using the right HTML form controls and other HTML elements, adding some very simple styling via CSS, and describing how data is sent to a server. 
+    - **Level:** Beginner
+
+  - [Read: **How to structure a web form**](https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form) and complete all the challenges _(e.g. Active Learning sections, etc.)_.
+    - **Description:** With the basics out of the way, we'll now look in more detail at the elements used to provide structure and meaning to the different parts of a form.
+    - **Level:** Beginner
+
+  - [Complete the: **Test your skills: Form structure** challenge](https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
+
+  **The different form controls:**
+
+  - [Read: **Basic native form controls**](https://developer.mozilla.org/en-US/docs/Learn/Forms/Basic_native_form_controls)
+    - **Description:** In this particular article, we will look at the original set of form controls, available in all browsers since the early days of the web.
+    - **Level:** Beginner
+
+  - [Complete the: **Test your skills: Basic controls** challenge](https://developer.mozilla.org/en-US/docs/Learn/Forms/Test_your_skills:_Basic_controls)
+
+<!-- ### Summary -->
+
+### Exercises
+
+  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheets are found in the `/user/weekXX/progress` folder, for example `user/week01/progress/progress.draft.w01.d01.csv`. You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
+### [Extra Resources](EXTRAS.md)
+
+### Sources and Attributions
+
+  **Content is based on the following sources:**
+
+  - **MDN**:
+    - [Web forms — Working with user data](https://developer.mozilla.org/en-US/docs/Learn/Forms) / [(Permalink)](https://github.com/mdn/content/blob/26f68076bcd8e3d5893cffcd9c1c01ff949318a9/files/en-us/learn/forms/index.md)
+    - [Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility) / [Permalink](https://github.com/mdn/content/blob/26f68076bcd8e3d5893cffcd9c1c01ff949318a9/files/en-us/learn/accessibility/index.md)
+
+</details>
+
+<!-- Week 2 - Day 5 | HTML Form Controls & Accessibility -->
+<details markdown="1">
+  <summary><h2>Week 2 - Day 5 | HTML Form Controls & Accessibility</h2></summary>
+
+### Schedule
+
+  - [Study](#study-plan-4)
+  - [Exercises](#exercises-4)
+  - [Extra Resources](#extra-resources-4)
+
+### Study Plan
+
+  **What you'll learn:**
+
+  - More HTML Form controls
   - Using your web dev skills responsibly to create accessible websites
+
+  **More form controls:**
+
+  - [Read: **The HTML5 input types**](https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types)
+    - **Description:** Now we'll look at the functionality of newer form controls in detail, including some new input types, which were added in HTML5 to allow the collection of specific types of data.
+    - **Level:** Beginner
+
+  - [Complete the: **Test your skills: HTML5 controls** challenge](https://developer.mozilla.org/en-US/docs/Learn/Forms/Test_your_skills:_HTML5_controls)
+
+  - [Read: **Other form controls**](https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls)
+    - **Description:** We now look at the functionality of non-`<input>` form elements in detail.
+    - **Level:** Beginner
+
+  - [Complete the: **Test your skills: Other controls** challenge](https://developer.mozilla.org/en-US/docs/Learn/Forms/Test_your_skills:_Other_controls)
 
   **Accessibility**
 
   Learning some HTML, CSS, and JavaScript is useful if you want to become a web developer. Beyond mechanical use, it's important to learn how to use these technologies **responsibly** so that all readers might use your creations on the web. To help you achieve this, this module will cover general best practices (which are demonstrated throughout the HTML, CSS and JavaScript topics), [cross browser testing](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing){:target="_blank"}, and some tips on enforcing accessibility from the start. We'll cover accessibility in special detail. This is probably the **most important aspect of web development**.
 
-  #### Overview
+  **Overview**
 
   When someone describes a site as "accessible", they mean that any user can use all its features and content, regardless of how the user accesses the web — even and especially users with physical or mental impairments.
 
@@ -325,59 +410,29 @@ _(Updated: 18/09/2023)_
 
   - [Watch: **Which airline apps fail blind people? - Which?**](https://www.youtube.com/watch?v=TUfM2IeZp54) to understand more about why Accessibility matters and why your responsibility as a web developer is crucial to the well-being of other human beings.
 
-  #### Guides
-
   - [Read: **What is accessibility?**](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility){:target="_blank"}
     - Description: This article starts off the module with a good look at what accessibility is — this includes what groups of people we need to consider and why, what tools different people use to interact with the web, and how we can make accessibility part of our web development workflow.
 
   - [HTML: A good basis for accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML){:target="_blank"}
     - Description: A great deal of web content can be made accessible just by making sure the correct HTML elements are always used for the correct purpose. This article looks in detail at how HTML can be used to ensure maximum accessibility.
 
-  ## See also
+  - Watch as many lessons as you can from the [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today){:target="_blank"} excellent excellent series of video tutorials by Marcy Sutton.
+
+  **See also:**
 
   Check out the following resources and make sure to cover the material included in there as you progress in this course and your web development journey:
 
-  - [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today){:target="_blank"} — an excellent series of video tutorials by Marcy Sutton.
   - [Deque University resources](https://dequeuniversity.com/resources/){:target="_blank"} — includes code examples, screen reader references, and other useful resources.
+
   - [WebAIM resources](https://webaim.org/resources/){:target="_blank"} — includes guides, checklists, tools, and more.
+
   - [Web Accessibility Evaluation Tools List](https://www.w3.org/WAI/ER/tools/){:target="_blank"} — includes a list of web accessibility evaluation tools.
 
-### Summary
+<!-- ### Summary -->
 
 ### Exercises
 
-  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheets are found in the `/user/weekXX/progress` folder, for example `user/week01/progress/progress.draft.w01.d01.csv`. You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
-
-### [Extra Resources](EXTRAS.md)
-
-### Sources and Attributions
-
-  **Content is based on the following sources:**
-
-  - **MDN**:
-    - [Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility) / [Permalink](https://github.com/mdn/content/blob/26f68076bcd8e3d5893cffcd9c1c01ff949318a9/files/en-us/learn/accessibility/index.md)
-
-</details>
-
-<!-- Week 2 - Day 5 | SVG & MathML -->
-<details markdown="1">
-  <summary><h2>Week 2 - Day 5 | SVG & MathML</h2></summary>
-
-### Schedule
-
-  - [Study](#study-plan-4)
-  - [Exercises](#exercises-4)
-  - [Extra Resources](#extra-resources-4)
-
-### Study Plan
-
-  **What you'll learn:**
-
-### Summary
-
-### Exercises
-
-  Now it's time to gather all this knowledge around HTML _(and GitHub)_, build your own Blog and take it online. Follow the instructions found [here](./exercises/lets_create_a_weblog/index.md). You might need to spend a few extra hours during the weekend to improve and finalize your Blog.
+  Now it's time to gather all this knowledge around HTML _(and GitHub)_, build your own (accessible) Blog and take it online. Follow the instructions found [here](./exercises/lets_create_a_weblog/index.md). You might need to spend a few extra hours during the weekend to improve and finalize your Blog.
 
   Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheets are found in the `/user/weekXX/progress` folder, for example `user/week01/progress/progress.draft.w01.d01.csv`. You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
 
