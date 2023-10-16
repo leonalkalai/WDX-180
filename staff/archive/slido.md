@@ -1,6 +1,6 @@
 # Sli.do Questions
 
-When archiving sli.do questions, make sure to first disable access (ability for participants to post new questions) then move all questions from archive back to main so that all questions are archived properly.
+[**Instructions**](./index.md)
 
 ---
 
