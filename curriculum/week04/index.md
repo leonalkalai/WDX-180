@@ -1,152 +1,235 @@
-# Week 4 | JavaScript Core 1
+---
+title: Week 04 | CSS 2 & Performance
+---
 
-## Week 4 - Day 1 | Scope & Arrays
+# Week 04 | CSS 2 & Performance
 
-  STUDY: https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer#interactivity_with_javascript
-  - First steps: ...
-  - ...
+_(Updated: 24/10/2023)_
 
-  ??? node validate
+---
+> **Important**
+> As you'll notice, after finishing a MDN article it has a suggestion on what to study next.
+> We strongly advise you to ignore this part and follow our curriculum's flow that you'll find on this document.
+---
 
-  ??? - [Watch: **var let const in Javascript Scope | Understanding Global Local Function Block Scope**](https://www.youtube.com/watch?v=_E96W6ivHng&list=PL0Zuz27SZ-6Oi6xNtL_fwCrwpuqylMsgT&index=15)
-  - Duration: min
-  - Level: Beginner
-  - <details>
-      <summary></summary>
-        <ul>
-        </ul>
-    </details>
+<!-- Week 04 - Day 1 | Styling Tables, Debugging and Organizing CSS -->
+<details markdown="1">
+  <summary>
+    <h2>Week 04 - Day 1 | Styling Tables, Debugging and Organizing CSS</h2>
+  </summary>
 
-  ??? - [Watch: **Arrays in Javascript | Arrays Tutorial for Beginners**](https://www.youtube.com/watch?v=0SyTDl4pb4w&list=PL0Zuz27SZ-6Oi6xNtL_fwCrwpuqylMsgT&index=16)
-  - Duration: 29min
-  - Level: Beginner
-  - <details>
-      <summary>What you'll learn</summary>
-        <ul>
-          <li>(00:00) Intro</li>
-          <li>(0:14) Arrays are Data Structures</li>
-          <li>(0:20) How to create an array</li>
-          <li>(1:00) How to add elements to an array</li>
-          <li>(2:00) Reference an array and view it in the console</li>
-          <li>(2:35) Length property of an array</li>
-          <li>(2:55) Reference the last element in an array</li>
-          <li>(3:55) Reference any item in an array by position</li>
-          <li>(4:20) Using the push() method to add elements to an array</li>
-          <li>(5:00) Using the pop() method to remove elements from an array</li>
-          <li>(6:00) Using the unshift() method to add elements to an array</li>
-          <li>(7:15) Using the shift() method to remove elements from an array</li>
-          <li>(8:15) Do the element positions change in the array?</li>
-          <li>(9:15) Referencing an element that does not exist</li>
-          <li>(9:35) How to remove an element from the middle of an array</li>
-          <li>(9:50) What happens when you delete an element from an array</li>
-          <li>(10:55) Using the splice() method to remove, replace, and insert elements</li>
-          <li>(13:45) The slice() method</li>
-          <li>(15:00) The reverse() method</li>
-          <li>(15:30) The join() method</li>
-          <li>(16:15) The split() method is a string method that creates a new array</li>
-          <li>(18:00) The concat() method</li>
-          <li>(18:55) Using the spread operator to combine arrays</li>
-          <li>(20:55) Multidimensional arrays / Nested arrays: Sports Store example</li>
-          <li>(21:45) Referencing an element in a single dimension array</li>
-          <li>(22:50) Referencing an element in a two dimensional array</li>
-          <li>(25:25) Referencing an element in a three dimensional array</li>
-        </ul>
-    </details>
+### Schedule
 
-  - [Watch: **Javascript Objects Explained | Javascript Objects Tutorial**](https://www.youtube.com/watch?v=rLPwCAqyCAE&list=PL0Zuz27SZ-6Oi6xNtL_fwCrwpuqylMsgT&index=18)
-  - Duration: 24min
-  - Level: Beginner
-  - <details>
-      <summary>What you'll learn</summary>
-        <ul>
-          <li>(00:00) Intro</li>
-          <li>(0:10) Objects have key-value pairs</li>
-          <li>(0:20) How to create an object</li>
-          <li>(1:00) How to access a property of an object</li>
-          <li>(1:15) What data goes inside of an object?</li>
-          <li>(1:20) How to create object properties</li>
-          <li>(2:30) How to access the different properties of an object</li>
-          <li>(3:20) Objects allow dot notation and bracket notation</li>
-          <li>(4:35) How to create object methods</li>
-          <li>(5:40) How to call an object method</li>
-          <li>(5:50) The keyword this inside of a method</li>
-          <li>(7:30) Object.create()</li>
-          <li>(7:45) Using an object as a constructor for another object</li>
-          <li>(8:30) Object Inheritance and examples of inheritance</li>
-          <li>(13:00) Object.keys()</li>
-          <li>(13:30) Object.values()</li>
-          <li>(13:45) Using a for in loop to loop through an object</li>
-          <li>(17:00) Deleting a property or method</li>
-          <li>(17:15) hasOwnProperty() method</li>
-          <li>(18:00) Destructuring Objects as variables</li>
-          <li>(19:45) Simplify destructuring by naming variables the same as object keys</li>
-          <li>(20:50) Destructuring Objects as parameters</li>
-        </ul>
-    </details>
+  - [Study](#study-plan)
 
-  **Notes:**
+### Study Plan
 
-  - You can use the `["bracket"]` property notation, whenever your keys include spaces or special characters, e.g. dots or question marks:
+  - [Read: **Styling tables**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables){:target="_blank"}
+    - Level: Beginner
+  - [Read: **Debugging CSS**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS){:target="_blank"}
+    - Level: Beginner
+  - [Read: **Organizing your CSS**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing){:target="_blank"}
+    - Level: Beginner
 
-  ```js
-  const object = {
-    "key with spaces" : true,
-    "really?" : 42,
-    "Wow! That's crazy!" : "Yes, indeed"
-  }
+<!-- Summary -->
 
-  console.log(object["key with spaces"]);
-  console.log(object["really?"]);
-  console.log(object["Wow! That's crazy!"]);
-  ```
+### Exercises
 
-  Also, make sure that you understand the difference between `obj[key]` and `obj["key"]` before moving on.
+  - [MDN's Assessment: **Test your skills: Tables**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Tables_tasks){:target="_blank"}
+  - [MDN's Assessment: **Fundamental CSS comprehension**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension){:target="_blank"}
 
-  - Even though you can use the variable name to access the object from within the object (see example below) it is preferred to use the `this` keyword in case the variable name gets changed:
+  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d01.csv**
 
-  ```js
-  let obj = { 
-    answer: 42,
-    meaning: function(){
-      console.log( obj.answer );
-    }
-  }
+  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
 
-  obj.meaning();
 
-  // However...
-  let ref = obj;
-  obj = null;
+### Extra Resources
 
-  ref.meaning(); // Uncaught TypeError: Cannot read properties of null (reading 'answer')
-  ```
+  - [MDN's Assessment: **Creating fancy letterheaded paper**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper){:target="_blank"}
+  - [MDN's Assessment: **A cool-looking box**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box){:target="_blank"}
 
-  So, the right way to do this is by using the `this` keyword to refer to the object itself:
+<!-- Sources and Attributions -->
+  
+</details>
 
-  ```js
-  let obj = { 
-    answer: 42,
-    meaning: function(){
-      console.log( this.answer );
-    }
-  }
+<!-- Week 04 - Day 2 | Styling Text -->
+<details markdown="1">
+  <summary>
+    <h2>Week 04 - Day 2 | Styling Text</h2>
+  </summary>
 
-  obj.meaning();
+### Schedule
 
-  let ref = obj;
-  obj = null;
+  - [Study](#study-plan-1)
 
-  ref.meaning(); // 42
-  ```
+### Study Plan
 
-## Week 4 - Day 2
+  With the basics of the CSS language covered, the next CSS topic for you to concentrate on is styling text — one of the most common things you'll do with CSS. Here we look at text styling fundamentals including setting font, boldness, italics, line and letter spacing, drop shadows, and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
 
-## Week 4 - Day 3
+  - [Read : **Fundamental text and font styling**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals){:target="_blank"}
+    - Level: Beginner
+  - [Read : **Styling lists**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_lists){:target="_blank"}
+    - Level: Beginner
+  - [Read : **Styling links**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links){:target="_blank"}
+    - Level: Beginner
+  - [Read : **Web fonts**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts){:target="_blank"}
+    - Level: Beginner
 
-## Week 4 - Day 4
+<!-- Summary -->
 
-## Week 4 - Day 5
+### Exercises
 
-## Week 4 - Weekend Suggestions
+  - [MDN's Assessment: **Typesetting a community school homepage**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage){:target="_blank"}
+
+  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d02.csv**
+
+  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
+
+<!-- Extra Resources -->
+
+<!-- Sources and Attributions -->
+  
+</details>
+
+<!-- Week 04 - Day 3 | CSS Layout Part 1 -->
+<details markdown="1">
+  <summary>
+    <h2>Week 04 - Day 3 | CSS Layout Part 1</h2>
+  </summary>
+
+### Schedule
+
+  - [Study](#study-plan-2)
+
+### Study Plan
+
+  - [Read: **Introduction to CSS layout**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction){:target="_blank"}
+    - Level: Beginner
+  - [Read: **Normal Flow**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow){:target="_blank"}
+    - Level: Beginner
+  - [Read: **Positioning**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning){:target="_blank"}
+    - Level: Beginner
+  - [Read: **Flexbox**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox){:target="_blank"}
+    - Level: Beginner
+
+<!-- Summary -->
+
+### Exercises
+
+  - [MDN's Assessment: **Test your skills: Positioning**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Position_skills){:target="_blank"}
+
+  - [Play: **Flexbox Defense**](http://flexboxdefense.com/){:target="_blank"}
+    - Tower Defense with a twist: all towers must be positioned with CSS Flexbox.
+    - Level: Beginner
+    - You can either record your progress through the game with <INSERT_TOOL_HERE> or post proof images that you reached the final page and have completed the all levels.
+
+  - [Play: **Flexbox Froggy**](https://flexboxfroggy.com/){:target="_blank"}
+    - A game for learning CSS flexbox called Flexbox Froggy. The goal of the game is to help the frogs get to their lily pads by writing CSS code. See if you can beat all the levels!
+    - Level: Beginner, Intermediate, Expert (check settings at the bottom of the page)
+    - Lots of languages available, but we suggest playing it in English.
+    - You can either record your progress through the game with <INSERT_TOOL_HERE> or post proof images that you reached the final page and have completed the all levels.
+
+  - [MDN's Assessment: **Test your skills: Flexbox**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills){:target="_blank"}
+
+  As for the Flexbox Defense(1) and Flexbox Froggy(2), if you've  enjoyed the experience and it has helped you learn something, do not forget to star (⭐) the repos ([1](https://github.com/channingallen/tower-defense){:target="_blank"} & [2](https://github.com/thomaspark/flexboxfroggy)){:target="_blank"} of these awesome games!
+
+  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d03.csv**
+
+  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
+
+<!-- Extra Resources -->
+
+### Sources and Attributions
+
+  - [Flexbox Defense](https://github.com/channingallen/tower-defense){:target="_blank"} [(Last Commit point)](https://github.com/channingallen/tower-defense/tree/8466c0d260aa2a30744a73331cfd6441afefc659){:target="_blank"}
+  - [Flexbox Froggy](https://github.com/thomaspark/flexboxfroggy){:target="_blank"} [(Last Commit point)](https://github.com/thomaspark/flexboxfroggy/tree/46274b15502b68f4d36d9377537f14643b16063c){:target="_blank"}
+  
+</details>
+
+<!-- Week 04 - Day 4 | CSS Layout Part 2 -->
+<details markdown="1">
+  <summary>
+    <h2>Week 04 - Day 4 | CSS Layout Part 2</h2>
+  </summary>
+
+### Schedule
+
+  - [Study](#study-plan-3)
+
+### Study Plan
+
+  - [Read: **Responsive Design**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design){:target="_blank"}
+    - Level: Beginner
+  - [Read: **Beginner's guide to media queries**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries){:target="_blank"}
+    - Level: Beginner
+  - [Read: **Legacy layout methods**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods){:target="_blank"}
+    - Level: Beginner
+  - [Read: **Supporting older browsers**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers){:target="_blank"}
+    - Level: Beginner
+
+<!-- Summary -->
+
+### Exercises
+
+  - [MDN's Assessment: **Test your skills: Responsive web design and media queries**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/rwd_skills){:target="_blank"}
+
+  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheets are found in the `/user/weekXX/progress` folder, for example `user/week01/progress/progress.draft.w01.d01.csv`. You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
+  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d04.csv**
+
+  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
+
+### Extra Resources
+
+  - [MDN's Assessment: **Fundamental layout comprehension**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension){:target="_blank"}
+
+<!-- Sources and Attributions -->
+  
+</details>
+
+<!-- Week 04 - Day 5 | Web Performance & CSS Pre-processors -->
+<details markdown="1">
+  <summary>
+    <h2>Week 04 - Day 5 | Web Performance & CSS Pre-processors</h2>
+  </summary>
+
+### Schedule
+
+  - [Study](#study-plan-4)
+
+### Study Plan
+
+  - [Read: **The "why" of web performance**](https://developer.mozilla.org/en-US/docs/Learn/Performance/why_web_performance){:target="_blank"}
+    - Level: Beginner
+  - [Read: **What is web performance?**](https://developer.mozilla.org/en-US/docs/Learn/Performance/What_is_web_performance){:target="_blank"}
+    - Level: Beginner
+  - [Read: **Perceived performance**](https://developer.mozilla.org/en-US/docs/Learn/Performance/Perceived_performance){:target="_blank"}
+    - Level: Beginner
+  - [Watch: **CSS Preprocessors**](https://www.youtube.com/watch?v=PJkWbezpHpE)
+    - **Description:** In this video we look at the wonderful world of CSS Preprocessors and a few of the awesome things that you can do with CSS Preprocessors, and look at a few of the more popular ones; LESS, Sass (SCSS), and Stylus.
+    - **Duration:** 12min
+
+<!-- Summary -->
+
+<!-- Exercises -->
+
+  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d05.csv**
+
+  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
+
+<!-- Extra Resources -->
+
+<!-- Sources and Attributions -->
+  
+</details>
+
+
+**Weekly feedback:** Hey, it's really important for us to know how your experience with the course has been so far, so don't forget to fill in and submit your [**mandatory** feedback form](https://forms.gle/S6Zg3bbS2uuwsSZF9){:target="_blank"} before the day ends. Thanks you!
+
+## Week 04 - Weekend Suggestions
 
 If you are in the mood of enjoying related content during the weekend, check out our weekly recommendations [here](WEEKEND.md).
