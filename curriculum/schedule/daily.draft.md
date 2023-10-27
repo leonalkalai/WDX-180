@@ -1,4 +1,5 @@
 <!-- {{ WDX:WEEK }} - {{ WDX:DAY }} | {{ WDX:TITLE}} -->
+
 <details markdown="1">
   <summary>
     <h2>{{ WDX:WEEK }} - {{ WDX:DAY }} | {{ WDX:TITLE }}</h2>

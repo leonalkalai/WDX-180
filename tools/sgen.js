@@ -34,11 +34,20 @@ const wdxTemplateRegexes = {
   attributionsRegex:  /\{\{\s?WDX:\s?ATTRIBUTIONS\s?\}\}/gi,
   includesRegex:      /\{\{\s?WDX:\s?INCLUDES:(.*)\s?\}\}/gi,
   dateUpdatedRegex:   /\{\{\s?WDX:\s?DATE_UPDATED\s?\}\}/gi,
-  weeklyContentRegex: /\{\{\s?WDX:\s?WEEKLY_CONTENT\s?\}\}/gi
+  weeklyContentRegex: /\{\{\s?WDX:\s?WEEKLY_CONTENT\s?\}\}/gi,
+  wdx: {
+    meta: {
+      progress: /<!-- WDX:META:PROGRESS:(?<params>.*) -->\n/i,
+      tests: /<!-- WDX:META:TESTS:(?<params>.*) -->\n/i,
+    }
+  }
 
 }
 const modulesFolder  = path.join("curriculum", "modules");
 const includesFolder = path.join("curriculum", "schedule", "includes");
+
+// TODO:
+// 1) Warn about #### inside the ### Module sections. Use **Bold** instead.
 
 // SECTIONS CONSTANTS:
 const SCHEDULE        = "Schedule";
@@ -292,7 +301,12 @@ function generateWeeklyProgressSheetFromWeeklyData({ weeklyData, title }){
 
       const progressFilename = `progress.draft.w${week}.d${paddedDay}.csv`;
       console.log("Writing to file " + progressFilename + ":");
-      printColoredCSV(dailyCSV);
+
+      // printColoredCSV(dailyCSV);
+      if ( dailyCSV === csvHeaders || dailyCSV.length === 0 ){
+        return;
+      }
+
       fs.writeFileSync(
         path.join( userFolder, progressFilename ),
         dailyCSV, "utf-8"
@@ -308,21 +322,87 @@ function generateWeeklyProgressSheetFromWeeklyData({ weeklyData, title }){
   return csv;
 }
 
-// Search for WDX:META patterns:
-function parseWdxMeta({ token }){
+function generateWeeklyTestsFromWeeklyData({ weeklyData, title }){
 
-  const wdxMetaRegex = /<!-- WDX:META:PROGRESS:(?<params>.*) -->\n/i;
+  weeklyData.forEach(dailyData =>{
+  
+    const { week, day } = dailyData.tests;
+    const testEntries = dailyData.tests.entries;
+    const upPaddedWeek   = week.indexOf("0") === 0 ? week.slice(1) : week;
+    const paddedDay      = String(day).padStart(2,"0");
+
+    if ( testEntries.length ){
+
+      console.log(`Creating tests for exercises of Week ${week} Day ${paddedDay}.`);
+
+      testEntries.forEach( entry =>{
+
+        const finalFolder = `user/week${week}/exercises/day${paddedDay}/${entry.user_folder}/`;
+
+        const testName = `Week ${week} - Day ${day} ${title} | ${entry.name}`;
+        const triggerOn = `on:\n  push:\n    branches:\n      - 'main'\n    paths:\n      - ${finalFolder}**`;
+        const jobs = `jobs:\n  ${entry.user_folder}:\n\n    runs-on: ubuntu-latest\n\n    `;
+        let steps = 'steps:\n      - name: Checkout code\n        uses: actions/checkout@v3\n';
+        if (entry.type === 'exist') {
+          steps += `\n      - name: "${entry.name} > Check solution files existence"\n        uses: andstor/file-existence-action@v2\n        with:\n          files: "${entry.files.map(file => `${finalFolder}${file}`).join(", ")}"\n          fail: true`;
+        } else if (entry.type === 'js') {
+          // TODO: Add configuration for JS tests (maybe will need more parameters on the WDX:META:TESTS comment) plus some existence checks
+          steps += ``;
+        }
+        const yamlContent = `name: "${testName}"\n${triggerOn}\n${jobs}${steps}`;
+
+        const workflowsFolder = path.join(".github", "workflows");
+        const workflowsFolderExists = fs.existsSync(workflowsFolder);
+
+        try {
+
+          yaml.parse(yamlContent);
+          
+          if ( workflowsFolderExists ) {
+
+            warn(`Folder ${workflowsFolder} already exists.`);
+  
+          } else {
+  
+            fs.mkdirSync(workflowsFolder, { recursive: true });
+            info(`Folder ${workflowsFolder} created.`);
+  
+          }
+  
+          const testFilename = `w${week}-d${paddedDay}-${entry.user_folder}.yaml`;
+          info(`Writing to file ${testFilename}:`);
+          fs.writeFileSync(
+            path.join(workflowsFolder, testFilename),
+            yamlContent, "utf-8"
+          );
+
+        } catch (e) {
+
+          console.log(`Error while writing YAML test file for exercise ${entry.name}: ${e}`);
+          
+        }
+
+      } );
+    }
+  })
+
+}
+
+// Search for WDX:META patterns:
+function parseWdxMetaProgress({ token }){
+
+  const wdxMetaProgressRegex = wdxTemplateRegexes.wdx.meta.progress;
   const entryDefault = {
     task: null,
     instructions: "Update FALSE to TRUE in the COMPLETED column",
     level: "Beginner"
   }
   const output = { hasMeta: null, meta: null, raw: null }
-  const hasWdxMeta = token.raw.match(wdxMetaRegex); 
+  const hasWdxMeta = token.raw.match(wdxMetaProgressRegex); 
   if ( hasWdxMeta ){
 
     output.hasMeta = true;
-    const raw = token.raw.replace(wdxMetaRegex, "");
+    const raw = token.raw.replace(wdxMetaProgressRegex, "");
     const params = hasWdxMeta.groups.params.split("|");
     const entry = {}
     params.forEach( param =>{
@@ -336,9 +416,52 @@ function parseWdxMeta({ token }){
 
 }
 
+// Search for WDX:META:TESTS
+function parseWdxMetaTests({ token }){
+
+  const wdxMetaTestsRegex = wdxTemplateRegexes.wdx.meta.tests;
+  const output = { hasMeta: null, meta: null, raw: null };
+  const hasWdxMetaTests = token.raw.match(wdxMetaTestsRegex);
+
+  if ( hasWdxMetaTests ) {
+    
+    output.hasMeta = true;
+    const raw = token.raw.replace(wdxMetaTestsRegex, "");
+    const params = hasWdxMetaTests.groups.params.split("|");
+    const entry = {};
+    params.forEach( param =>{
+      const [ key, value ] = param.split("=");
+      if ( key === 'files' ) {
+
+        entry[key] = value.split(",");
+
+      } else {
+
+        entry[key] = value;
+
+      }
+    })
+    output.meta = { ...entry, raw };
+
+  }
+  return output;
+
+}
+
 function replaceSectionFromObject( section, contentObject ){
 
   return function( match ){
+
+    if ( !contentObject[section] ){
+
+      warn(`Something's wrong with "${section}" section. Check this in the Module's markdown. Perhaps you are missing this section or the section is not using a Level 3 heading? => ###`);
+      return `<!-- ${section} -->`;
+
+    } else {
+
+      ok(`Section "${section.toString()}" parsed correctly`);
+
+    }
 
     let dailyScheduleSection = "";
 
@@ -375,6 +498,11 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
     day,
     entries: []
   }
+  const dailyTestsObject = {
+    week: numOfWeek,
+    day,
+    entries: []
+  }
   // Create Object that contains content that will replace the {{ WDX }} patterns inside the template:
   let headingCursor;
   const dailyContentObject = moduleMarkdownTokens
@@ -402,14 +530,22 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
           ) 
         ){
 
-          const wdxMeta = parseWdxMeta({ token: nextToken });
+          const wdxMetaProgress = parseWdxMetaProgress({ token: nextToken });
+          const wdxMetaTests = parseWdxMetaTests({ token: nextToken });
 
-          if ( wdxMeta.hasMeta ){
+          if ( wdxMetaProgress.hasMeta ){
 
-            nextToken.raw = wdxMeta.raw;
+            nextToken.raw = wdxMetaProgress.raw;
             dailyProgressObject.entries.push({ 
-              ...wdxMeta.meta,
+              ...wdxMetaProgress.meta,
               extras: headingCursor.text === EXTRA_RESOURCES 
+            });
+
+          } else if ( wdxMetaTests.hasMeta ) {
+
+            nextToken.raw = wdxMetaTests.raw;
+            dailyTestsObject.entries.push({
+              ...wdxMetaTests.meta
             });
 
           } else {
@@ -486,7 +622,7 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
 
   });
 
-  return { content: dailyContent, progress: dailyProgressObject };
+  return { content: dailyContent, progress: dailyProgressObject, tests: dailyTestsObject };
 
 }
 
@@ -564,6 +700,11 @@ function createWeeklyContentFromYaml({ configYaml, filename }) {
       weeklyData, title 
     });
 
+    // Generate yaml tests:
+    const test = generateWeeklyTestsFromWeeklyData({
+      weeklyData, title
+    });
+
   } catch(e) {
 
     console.log(e);
@@ -583,16 +724,11 @@ function init() {
     process.exit();
   }
 
-  
+  const configYaml = fs.readFileSync(path.join(configYamlPath), "utf-8");
+  const { input, output, Syllabus } = yaml.parse(configYaml);
+
   try {
-    
-    const configYaml = fs.readFileSync(path.join(configYamlPath), "utf-8");
 
-    if ( configYaml.length === 0 ){
-      throw new Error("YAML file seems to be empty.");
-    }
-
-    const { input, output, Syllabus } = yaml.parse(configYaml);
     const textContent = fs.readFileSync(input, "utf-8");
 
     if (Syllabus) {  // e.g. curriculum/curriculum.yaml
