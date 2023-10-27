@@ -8,12 +8,6 @@ _(Updated: 27/10/2023)_
 
 ---
 
-> **Important**
-> As you'll notice, after finishing an MDN article, there are suggestions on what to study next.
-> We strongly advise you to ignore this part and follow our curriculum's flow that you'll find on this document.
-
----
-
 <!-- Week 04 - Day 1 | Styling Tables, Debugging and Organizing CSS -->
 <details markdown="1">
   <summary>
@@ -25,6 +19,10 @@ _(Updated: 27/10/2023)_
   - [Study](#study-plan)
 
 ### Study Plan
+
+> **Important**
+> As you'll notice, after finishing an MDN article, there are suggestions on what to study next.
+> We strongly advise you to ignore this part and follow our curriculum's flow that you'll find on this document.
 
   - [Read: **Styling tables**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables){:target="_blank"}
     - Level: Beginner
@@ -43,7 +41,7 @@ _(Updated: 27/10/2023)_
 
   - [MDN's Assessment: **Fundamental CSS comprehension**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension){:target="_blank"}
 
-  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d01.csv**
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d01.csv**
 
   You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
 
@@ -90,7 +88,7 @@ _(Updated: 27/10/2023)_
 
   - [MDN's Assessment: **Typesetting a community school homepage**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage){:target="_blank"}
 
-  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d02.csv**
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d02.csv**
 
   You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
 
@@ -144,7 +142,7 @@ _(Updated: 27/10/2023)_
 
   As for the Flexbox Defense(1) and Flexbox Froggy(2), if you've  enjoyed the experience and it has helped you learn something, do not forget to star (⭐) the repos ([1](https://github.com/channingallen/tower-defense){:target="_blank"} & [2](https://github.com/thomaspark/flexboxfroggy)){:target="_blank"} of these awesome games!
 
-  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d03.csv**
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d03.csv**
 
   You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
 
@@ -188,7 +186,7 @@ _(Updated: 27/10/2023)_
 
   - [MDN's Assessment: **Test your skills: Responsive web design and media queries**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/rwd_skills){:target="_blank"}
 
-  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d04.csv**
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d04.csv**
 
   You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
 
@@ -248,7 +246,7 @@ _(Updated: 27/10/2023)_
 
   The goal is to have a score on all categories over 90. **Let's start analyzing this webpage**!
 
-  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d05.csv**
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d05.csv**
 
   You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
 
@@ -259,6 +257,8 @@ _(Updated: 27/10/2023)_
   
 </details>
 
+
+---
 
 **Weekly feedback:** Hey, it's really important for us to know how your experience with the course has been so far, so don't forget to fill in and submit your [**mandatory** feedback form](https://forms.gle/S6Zg3bbS2uuwsSZF9){:target="_blank"} before the day ends. Thanks you!
 

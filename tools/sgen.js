@@ -167,7 +167,7 @@ function createSyllabusFromMarkdownText({ configYaml, textContent }) {
 
 }
 
-function replaceInclude({ day, numOfWeek }){
+function getInclude({ file, day, numOfWeek }){
 
   const {
 
@@ -176,22 +176,33 @@ function replaceInclude({ day, numOfWeek }){
 
   } = wdxTemplateRegexes;
 
+  const includeFile = path.join( includesFolder, file.trim() + ".md" );
+
+  try {
+
+    const contents = fs.readFileSync(includeFile, "utf-8");
+    return contents
+    .replace(weekRegex,String(numOfWeek).padStart(2,"0"))
+    .replace(dayRegex, String(day).padStart(2,"0"));
+
+  } catch(e) {
+
+    console.log(e);
+    return `<!-- Missing include file: ${file.trim()}.md -->`
+
+  }
+
+}
+
+function replaceInclude({ day, numOfWeek }){
+
   return function( match, group1, string){
 
-    const includeFile = path.join( includesFolder, group1.trim() + ".md" );
-    try {
-
-      const contents = fs.readFileSync(includeFile, "utf-8");
-      return contents
-      .replace(weekRegex,String(numOfWeek).padStart(2,"0"))
-      .replace(dayRegex, String(day).padStart(2,"0"));
-
-    } catch(e) {
-
-      console.log(e);
-      return `<!-- Missing include file: ${group1.trim()}.md -->`
-
-    }
+    return getInclude({ 
+      file: group1, 
+      day: String(day).padStart(2,"0"), 
+      numOfWeek: String(numOfWeek).padStart(2,"0") 
+    });
 
   }
 }
@@ -233,6 +244,58 @@ function parseWeeklyPatterns({ raw, numOfWeek, weeklyContent, title }){
   .replace(includesRegex, replaceInclude({ numOfWeek }));
 
   return newRaw;
+}
+
+function copyModuleMediaAssets({ weeklyData, title }){
+
+  weeklyData.forEach( dailyData =>{
+
+    const mediaEntries = dailyData.media;
+
+    if ( mediaEntries ){
+
+      for ( const entry of mediaEntries.entries ){
+        const mediaPath = path.join( mediaEntries.dailyModuleDir, entry );
+        const targetPath = path.join( "curriculum", `week${mediaEntries.week}` );
+        const targetFile = path.join( targetPath, entry );
+
+        try {
+
+          const userFolderExists = fs.existsSync(targetPath)
+      
+          if ( userFolderExists ) {
+        
+            warn(`Folder '${targetPath}' already exists.`);
+            
+          } else {
+            
+            fs.mkdirSync(targetPath, { recursive: true });
+            console.log(`Folder '${targetPath}' created.`);
+            
+          }
+
+          fs.copyFile(mediaPath, targetFile, (err) => {
+            if (err) {
+              console.log(err);
+              throw err
+            };
+            ok(`${checkmark} MEDIA COPIED: ${mediaPath} => ${targetFile}`);
+          });
+
+        } catch (e){
+
+          console.log(e);
+          
+        }
+
+      }
+
+      return;
+
+    }
+
+  });
+
 }
 
 // Generate progress.draft.*.csv files from weekly content object
@@ -448,7 +511,7 @@ function parseWdxMetaTests({ token }){
 
 }
 
-function replaceSectionFromObject( section, contentObject ){
+function replaceSectionFromObject({ section, contentObject, day, numOfWeek }){
 
   return function( match ){
 
@@ -469,7 +532,19 @@ function replaceSectionFromObject( section, contentObject ){
 
       dailyScheduleSection = contentObject[section].heading + contentObject[section].nextSection;
 
+      if ( section === EXERCISES ){
+
+        const progress_update_reminder = getInclude({ 
+          file: "progress_update_reminder",
+          day,
+          numOfWeek 
+        });
+        dailyScheduleSection += "\n\n" + progress_update_reminder;
+
+      }
+
     } else {
+
 
       dailyScheduleSection = `<!-- ${contentObject[section].text.trim()} -->`
 
@@ -488,7 +563,8 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
     return;
   }
 
-  const dailyModule    = path.join( modulesFolder, dayMeta.module, "index.md" ); 
+  const dailyModuleDir = path.join( modulesFolder, dayMeta.module ); 
+  const dailyModule    = path.join( dailyModuleDir, "index.md" ); 
   const moduleMarkdown = fs.readFileSync(dailyModule, "utf-8");
   const { content, data: fm, orig } = matter(moduleMarkdown);
   const moduleMarkdownTokens = marked.lexer(content);
@@ -503,11 +579,25 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
     day,
     entries: []
   }
+  const dailyMediaAssets = {
+    dailyModuleDir,
+    week: numOfWeek,
+    day,
+    entries: new Set()
+  }
   // Create Object that contains content that will replace the {{ WDX }} patterns inside the template:
   let headingCursor;
   const dailyContentObject = moduleMarkdownTokens
   .filter( t => t.type !== "space" )
   .reduce((acc,token,idx,tokens)=>{
+
+    if ( token.type === "paragraph" ){
+      token.tokens.forEach( t =>{
+        if ( t.type === "image" ){
+          dailyMediaAssets.entries.add(t.href);
+        }
+      });
+    }
 
     if ( token.type === "heading" && token.depth === 3 ){
 
@@ -602,18 +692,36 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
 
     } = wdxTemplateRegexes;
 
-    // if ( day === "1" ) console.log(token);
-
     dailyContent += token.raw
     .replace(weekRegex, `Week ${numOfWeek}`)
     .replace(titleRegex, fm.title)
     .replace(dayRegex, `Day ${day}`)
-    .replace(scheduleRegex, replaceSectionFromObject(SCHEDULE, dailyContentObject))
-    .replace(studyPlanRegex, replaceSectionFromObject(STUDY_PLAN, dailyContentObject))
-    .replace(summaryRegex, replaceSectionFromObject(SUMMARY, dailyContentObject))
-    .replace(exercisesRegex, replaceSectionFromObject(EXERCISES, dailyContentObject))
-    .replace(extrasRegex, replaceSectionFromObject(EXTRA_RESOURCES, dailyContentObject))
-    .replace(attributionsRegex, replaceSectionFromObject(ATTRIBUTIONS, dailyContentObject))
+    .replace(scheduleRegex, replaceSectionFromObject({ 
+      section: SCHEDULE, 
+      contentObject: dailyContentObject
+    }))
+    .replace(studyPlanRegex, replaceSectionFromObject({
+      section: STUDY_PLAN, 
+      contentObject: dailyContentObject
+    }))
+    .replace(summaryRegex, replaceSectionFromObject({
+      section: SUMMARY, 
+      contentObject: dailyContentObject
+    }))
+    .replace(exercisesRegex, replaceSectionFromObject({
+      section: EXERCISES, 
+      contentObject: dailyContentObject,
+      day,
+      numOfWeek
+    }))
+    .replace(extrasRegex, replaceSectionFromObject({
+      section: EXTRA_RESOURCES, 
+      contentObject: dailyContentObject
+    }))
+    .replace(attributionsRegex, replaceSectionFromObject({
+      section: ATTRIBUTIONS, 
+      contentObject: dailyContentObject
+    }))
     .replace(includesRegex, replaceInclude({ day, numOfWeek }));
 
     if ( (idx === (tokens.length - 1)) && (day !== "5") ){
@@ -622,7 +730,14 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
 
   });
 
-  return { content: dailyContent, progress: dailyProgressObject, tests: dailyTestsObject };
+  const hasDailyMediaAssets = dailyMediaAssets.entries.size > 0;
+
+  return { 
+    content: dailyContent, 
+    progress: dailyProgressObject, 
+    tests: dailyTestsObject,
+    media: hasDailyMediaAssets ? dailyMediaAssets : null 
+  };
 
 }
 
@@ -694,6 +809,9 @@ function createWeeklyContentFromYaml({ configYaml, filename }) {
   
     const weeklyIndexMarkdown = path.join( weeklyFolder, "index.md" );
     fs.writeFileSync(weeklyIndexMarkdown, outputContent, "utf-8");
+
+    // Copy Media Assets from Module folder to curriculum/
+    copyModuleMediaAssets({ weeklyData, title });
 
     // Generate progress sheets:
     const csv = generateWeeklyProgressSheetFromWeeklyData({ 
