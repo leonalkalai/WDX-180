@@ -1,19 +1,6 @@
 ---
-title: Week 05 | CSS Frameworks
+title: Practice with Form Input fields
 ---
-
-# Week 05 | CSS Frameworks
-
-_(Updated: 31/10/2023)_
-
----
-
-<!-- Week 05 - Day 1 | Practice with Form Input fields -->
-<details markdown="1">
-  <summary>
-    <h2>
-      <span class="summary-day">Week 05 - Day 1</span> | Practice with Form Input fields</h2>
-  </summary>
 
 ### Schedule
 
@@ -25,8 +12,6 @@ _(Updated: 31/10/2023)_
 
   <!-- ![](assets/css.bg.media.sizing.png) -->
 
-
-
   > Inspirational quote of the week:
   >
   > ___"If I ran a school, I’d give the average grade to the ones 
@@ -36,11 +21,7 @@ _(Updated: 31/10/2023)_
   >
   > R. Buckminster Fuller
 
-
-
   ---
-
-
 
   This Module is about replicating some real-life User Interfaces and specifically the form fields found in the [**YouTube Studio**](https://www.youtube.com/playlist?list=PLpjK416fmKwQ42eDY75Q05uM0g3N9WNXU){:target="_blank"} video editor page.
 
@@ -52,9 +33,11 @@ _(Updated: 31/10/2023)_
 
   Scroll down to the [**Exercises section**](#exercises) to find all the details and start the project. 
 
-<!-- Summary -->
+### Summary
 
 ### Exercises
+
+<!-- WDX:META:PROGRESS:task=Complete the 'Form Input Field' practice challenge|user_folder=input_fields_practice -->
 
 **What are you building?**
 
@@ -101,59 +84,6 @@ We are basically creating a single `<input>` form field of type `text`. In the s
 
 - [Input pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#input_pseudo-classes){:target="_blank"}
 
-  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week05/progress/progress.draft.w05.d01.csv**
+### Extra Resources
 
-  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
-
-
-<!-- Extra Resources -->
-
-<!-- Sources and Attributions -->
-  
-</details>
-
-<hr class="mt-1">
-
-<!-- Week 05 - Day 5 | How To Make A Website With Tailwind CSS -->
-<details markdown="1">
-  <summary>
-    <h2>
-      <span class="summary-day">Week 05 - Day 5</span> | How To Make A Website With Tailwind CSS</h2>
-  </summary>
-
-### Schedule
-
-  - [Study](#study-plan-05)
-  - [Exercises](#exercises-05)
-  - [Extra Resources](#extra-resources-05)
-
-### Study Plan
-
-  - [Watch: **How To Make A Website With Tailwind CSS**](https://www.youtube.com/watch?v=8eQwgc9nc64){:target="_blank"}
-    - **Duration:** 32min
-    - **Level:** Beginner
-
-  - Now, go through the video again, pause and code along. Below, you can find all the images needed to complete the tutorial:
-    - [**cart.png**](./assets/cart.png){:target="_blank"}
-    - [**grocery-image.png**](./assets/grocery-image.png){:target="_blank"}
-    - [**Image.png**](./assets/Image.png){:target="_blank"}
-    - [**logo.png**](./assets/logo.png){:target="_blank"}
-
-<!-- Summary -->
-
-<!-- Exercises -->
-
-<!-- Extra Resources -->
-
-<!-- Sources and Attributions -->
-  
-</details>
-
-
-<hr class="mt-1">
-
-**Weekly feedback:** Hey, it's really important for us to know how your experience with the course has been so far, so don't forget to fill in and submit your [**mandatory** feedback form](https://forms.gle/S6Zg3bbS2uuwsSZF9){:target="_blank"} before the day ends. Thanks you!
-
-## Week 05 - Weekend Suggestions
-
-If you are in the mood of enjoying related content during the weekend, check out our weekly recommendations [here](WEEKEND.md).
+### Sources and Attributions

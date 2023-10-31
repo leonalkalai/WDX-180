@@ -309,6 +309,10 @@ function generateWeeklyProgressSheetFromWeeklyData({ weeklyData, title }){
 
     let dailyCSV = csvHeaders;
 
+    if ( !dailyData.progress ){
+      return false;
+    }
+
     const progressEntries = dailyData.progress.entries;
     const { week, day }  = dailyData.progress;
     const upPaddedWeek   = week.indexOf("0") === 0 ? week.slice(1) : week;
@@ -364,12 +368,13 @@ function generateWeeklyProgressSheetFromWeeklyData({ weeklyData, title }){
       }
 
       const progressFilename = `progress.draft.w${week}.d${paddedDay}.csv`;
-      console.log("Writing to file " + progressFilename + ":");
 
       // printColoredCSV(dailyCSV);
       if ( dailyCSV === csvHeaders || dailyCSV.length === 0 ){
         return;
       }
+
+      console.log("Writing to file " + progressFilename + ":");
 
       fs.writeFileSync(
         path.join( userFolder, progressFilename ),
@@ -390,6 +395,10 @@ function generateWeeklyTestsFromWeeklyData({ weeklyData, title }){
 
   weeklyData.forEach(dailyData =>{
   
+    if ( !dailyData.tests ){
+      return false;
+    }
+
     const { week, day } = dailyData.tests;
     const testEntries = dailyData.tests.entries;
     const upPaddedWeek   = week.indexOf("0") === 0 ? week.slice(1) : week;
@@ -516,6 +525,8 @@ function replaceSectionFromObject({ section, contentObject, day, numOfWeek }){
 
   return function( match ){
 
+    const { weekRegex, dayRegex } = wdxTemplateRegexes;
+
     if ( !contentObject[section] ){
 
       warn(`Something's wrong with "${section}" section. Check this in the Module's markdown. Perhaps you are missing this section or the section is not using a Level 3 heading? => ###`);
@@ -551,8 +562,40 @@ function replaceSectionFromObject({ section, contentObject, day, numOfWeek }){
 
     }
 
+    dailyScheduleSection = dailyScheduleSection.replace(weekRegex, `Week ${numOfWeek}`).replace(dayRegex, `Day ${day}`);
+
     return dailyScheduleSection;
   }
+
+}
+
+// Input: Token => Output: Array(hrefs)
+function parseTokenForMediaAssets( token ){
+
+  const hrefs = [];
+
+  if ( token.type === "paragraph" ){
+
+    token.tokens.forEach( t =>{
+
+      const isImage        = t.type === "image";
+      const isInAssets     = t.href && ( t.href.indexOf("./assets") === 0 );
+      const isLink         = t.type === "link";
+      const hasImageToken  = t.tokens && Array.isArray(t.tokens) && ( t.tokens.length === 1) && ( t.tokens[0].type === "image" );
+
+      if ( isImage && isInAssets ){
+        hrefs.push(t.href);
+      }
+
+      if ( isLink && hasImageToken ){
+        hrefs.push(t.tokens[0].href);
+      }
+  
+    });
+
+  }
+
+  return hrefs;
 
 }
 
@@ -597,12 +640,13 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
   .filter( t => t.type !== "space" )
   .reduce((acc,token,idx,tokens)=>{
 
-    if ( token.type === "paragraph" ){
-      token.tokens.forEach( t =>{
-        if ( t.type === "image" ){
-          dailyMediaAssets.entries.add(t.href);
-        }
-      });
+    // Parse for Media Assets:
+    const hrefs = parseTokenForMediaAssets(token);
+
+    if ( hrefs.length > 0 ){
+      hrefs.forEach( href => {
+        dailyMediaAssets.entries.add(href);
+      })
     }
 
     if ( token.type === "heading" && token.depth === 3 ){
@@ -704,15 +748,21 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
     .replace(dayRegex, `Day ${day}`)
     .replace(scheduleRegex, replaceSectionFromObject({ 
       section: SCHEDULE, 
-      contentObject: dailyContentObject
+      contentObject: dailyContentObject,
+      day,
+      numOfWeek
     }))
     .replace(studyPlanRegex, replaceSectionFromObject({
       section: STUDY_PLAN, 
-      contentObject: dailyContentObject
+      contentObject: dailyContentObject,
+      day,
+      numOfWeek
     }))
     .replace(summaryRegex, replaceSectionFromObject({
       section: SUMMARY, 
-      contentObject: dailyContentObject
+      contentObject: dailyContentObject,
+      day,
+      numOfWeek
     }))
     .replace(exercisesRegex, replaceSectionFromObject({
       section: EXERCISES, 
@@ -722,11 +772,15 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
     }))
     .replace(extrasRegex, replaceSectionFromObject({
       section: EXTRA_RESOURCES, 
-      contentObject: dailyContentObject
+      contentObject: dailyContentObject,
+      day,
+      numOfWeek
     }))
     .replace(attributionsRegex, replaceSectionFromObject({
       section: ATTRIBUTIONS, 
-      contentObject: dailyContentObject
+      contentObject: dailyContentObject,
+      day,
+      numOfWeek
     }))
     .replace(includesRegex, replaceInclude({ day, numOfWeek }));
 
@@ -896,6 +950,7 @@ if (require.main === module) {
 // 4) EXPORT SECTION: ==========================================================
 
 module.exports = {
+  wdxTemplateRegexes, // This export is for testing purposes.
   getFrontMatterStringFromObject,
   createSyllabusFromMarkdownText
 }
