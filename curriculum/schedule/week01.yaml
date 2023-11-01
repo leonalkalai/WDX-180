@@ -4,20 +4,20 @@ title: Introduction to the Web and Web Technologies
 schedule: 
   days:
     1:
-      # file://./../modules/
-      module: 
+      # file://./../modules/computer_science/misc/basics_of_computing/index.md
+      module: computer_science/misc/basics_of_computing
     2: 
-      # file://./../modules/
-      module: 
+      # file://./../modules/computer_science/internet/www/how_the_internet_and_the_web_works/index.md
+      module: computer_science/internet/www/how_the_internet_and_the_web_works
     3: 
-      # file://./../modules/
-      module: 
+      # file://./../modules/html/misc/html_in_a_day/index.md
+      module: html/misc/html_in_a_day
     4: 
-      # file://./../modules/
-      module: 
-    5: 
-      # file://./../modules/
-      module:
+      # file://./../modules/css/misc/css_in_a_day/index.md
+      module: css/misc/css_in_a_day
+    5: # JavaScript in a Day
+      # file://./../modules/javascript/javascript_in_a_day/index.md
+      module: javascript/javascript_in_a_day
 
 # TODO: Add common beginner mistakes in HTML language syntax:
 # 1) Improper Tag Spacing + No indentation
@@ -41,3 +41,9 @@ schedule:
 
 # TODO: Add Cryptography Basics Video
 # W01D01: What is Cryptography? https://www.youtube.com/watch?v=Kf9KjCKmDcU
+
+# TODO: Web Oversimplified
+# https://learn.js.org/WebOversimplified/index.html#/
+
+# TODO: How Encryption Keys Work - with Chris Bishop
+# https://www.youtube.com/watch?v=EDTx3meIeT0
