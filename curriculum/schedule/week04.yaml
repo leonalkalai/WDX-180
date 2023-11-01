@@ -15,6 +15,9 @@ schedule:
     3: # CSS Layout Intro / Normal Flow / Positioning / Flexbox
       # file://./../modules/css/layout_part1/index.md
       module: css/layout_part1
+      # TODO: INTEGRATE CSS GRID IN 7min
+      # https://www.youtube.com/watch?v=uAagyjvxSPY
+      # After: "Read: Introduction to CSS layout"
       # TODO: STUDY & INTEGRATE: https://www.youtube.com/watch?v=yMEjLBKyvEg (The fundamentals of CSS layout | Workshop)
       # TODO: STUDY & INTEGRATE: https://github.com/samanthaming/Flexbox30
       # 1) Star the Repo Reminder 
@@ -24,7 +27,11 @@ schedule:
       # TODO: INTEGRATE INTERACTIVE LEARNING MATERIAL: https://eventloop.gr/Education/TechTalentSchool/flexbox/flexbox-order.html
       # TODO: INTEGRATE: https://github.com/channingallen/tower-defense
       # TODO: INTEGRATE: https://github.com/thomaspark/flexboxfroggy
-
+      # TODO: STUDY & INTEGRATE: https://www.youtube.com/watch?v=Hsu8uqQTSV8
+      # (Student Approved Resource). Contains: 
+      # +Semantic HTML page structure
+      # -Uses float/clear for layout
+      # +Media queries for responsive version
     4: 
       # file://./../modules/css/layout_part2/index.md
       module: css/layout_part2
