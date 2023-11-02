@@ -4,8 +4,8 @@ title: CSS 2 & Performance
 schedule: 
   days:
     1: # Styling Tables, Debugging and Organizing CSS
-      # file://./../modules/css/styling_tables_debugging_organizing/index.md
-      module: css/styling_tables_debugging_organizing
+      # file://./../modules/css/misc/styling_tables_debugging_organizing/index.md
+      module: css/misc/styling_tables_debugging_organizing
       # TODO: STUDY ALTERNATIVE/EXTRA EXERCISES: 
       # 1) /BOOTCAMP/EXERCISES/HTML - CSS/TABLES/http.status.codes.tables.exercise.jpeg
       # 2) /BOOTCAMP/EXERCISES/HTML - CSS/TABLES/monthly.sheet.jpg 
@@ -15,6 +15,8 @@ schedule:
     3: # CSS Layout Intro / Normal Flow / Positioning / Flexbox
       # file://./../modules/css/layout_part1/index.md
       module: css/layout_part1
+      # TODO: STUDY & INTEGRATE AS A MODULE: /curriculum/modules/css/flexbox/flexbox-playground/dist/index.html (Remove unused code?)
+      # TODO: STUDY & INTEGRATE: https://flexbox.ninja/demos/holy-grail-layout/
       # TODO: INTEGRATE CSS GRID IN 7min
       # https://www.youtube.com/watch?v=uAagyjvxSPY
       # After: "Read: Introduction to CSS layout"
@@ -32,7 +34,7 @@ schedule:
       # +Semantic HTML page structure
       # -Uses float/clear for layout
       # +Media queries for responsive version
-    4: 
+    4: # Responsive Design, Media Queries
       # file://./../modules/css/layout_part2/index.md
       module: css/layout_part2
     5: 
