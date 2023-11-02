@@ -6,7 +6,11 @@ title: Week 1
 
 _(Updated: 28/09/2023)_
 
-Welcome to the first part of our curriculum, WDX 60°. The goal of this first part, that will span 60 days, is to give you a basic understanding of how computers and the Internet work, how the World Wide Web _(or Web for short)_ which is built on top of them works and connects people and ideas together through the use of these 3 building blocks: HTML, CSS and JavaScript. By the end of this part of the course, you'd be able to code in these 3 languages and deploy your websites and web applications on the Web.  
+![](./assets/colorful.02.png)
+
+**Welcome to the first part of our curriculum, WDX 60°!** 
+
+The goal of this first part, that will span 60 days, is to give you a basic understanding of how computers and the Internet work, how the World Wide Web _(or Web for short)_ which is built on top of them works and connects people and ideas together through the use of these 3 building blocks: HTML, CSS and JavaScript. By the end of this part of the course, you'd be able to code in these 3 languages and deploy your websites and web applications on the Web.  
 
 Before you dive in, **make sure that you have your notebook** and colored pens besides your computer, in order to pause and take those invaluable notes as you move along the curriculum.
 
@@ -130,6 +134,8 @@ We encourage you to **help and support each other** but in a constructive and he
 ### [Extra Resources](EXTRAS.md#day-01---computing)
 
 </details>
+
+<hr class="mt-1">
 
 <!-- Week 1 - Day 2 | How the Internet & the World Wide Web works -->
 <details markdown="1">
@@ -287,6 +293,8 @@ We encourage you to **help and support each other** but in a constructive and he
 
 </details>
 
+<hr class="mt-1">
+
 <!-- Week 1 - Day 3 | HTML & Markdown -->
 <details markdown="1">
   <summary><h2>Week 1 - Day 3 | HTML & Markdown</h2></summary>
@@ -397,6 +405,8 @@ We encourage you to **help and support each other** but in a constructive and he
     - [Getting started with the web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)
 </details>
 
+<hr class="mt-1">
+
 <!-- Week 1 - Day 4 | CSS -->
 <details markdown="1">
   <summary><h2>Week 1 - Day 4 | CSS</h2></summary>
@@ -440,6 +450,8 @@ Apart from creating HTML content and styling it with CSS, you also have some ins
 ### [Extra Resources](EXTRAS.md#day-04---css)
 
 </details>
+
+<hr class="mt-1">
 
 <!-- Week 1 - Day 5 | JavaScript -->
 <details markdown="1">
@@ -853,6 +865,8 @@ Apart from creating HTML content and styling it with CSS, you also have some ins
 
   - [How to read complex code - Felienne Hermans](https://www.youtube.com/watch?v=GUtfW7SHMc4) 
 </details>
+
+<hr class="mt-1">
 
 **Weekly feedback:** Hey, it's really important for us to know how your experience with the course has been so far, so don't forget to fill in and submit your [**mandatory** feedback form](https://forms.gle/S6Zg3bbS2uuwsSZF9) before the day ends. Thanks you! 
 
