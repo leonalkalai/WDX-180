@@ -25,9 +25,13 @@ const wdxTemplateRegexes = {
 
   // TODO: weekRegex will be replaced by weekFullRegex and weekNumRegex
   weekRegex:          /\{\{\s?WDX:\s?WEEK\s?\}\}/gi,
+  weekNumRegex:       /\{\{\s?WDX:\s?WEEK_NUM\s?\}\}/gi,
   weekFullRegex:      /\{\{\s?WDX:\s?WEEK_FULL\s?\}\}/gi,
   titleRegex:         /\{\{\s?WDX:\s?TITLE\s?\}\}/gi,
+  // TODO: dayRegex will be replaced by dayFullRegex and dayNumRegex
   dayRegex:           /\{\{\s?WDX:\s?DAY\s?\}\}/gi,
+  dayFullRegex:       /\{\{\s?WDX:\s?DAY_FULL\s?\}\}/gi,
+  dayNumRegex:        /\{\{\s?WDX:\s?DAY_NUM\s?\}\}/gi,
   scheduleRegex:      /\{\{\s?WDX:\s?DAILY_SCHEDULE\s?\}\}/gi,
   studyPlanRegex:     /\{\{\s?WDX:\s?STUDY_PLAN\s?\}\}/gi,
   summaryRegex:       /\{\{\s?WDX:\s?SUMMARY\s?\}\}/gi,
@@ -270,7 +274,7 @@ function copyModuleMediaAssets({ weeklyData, title }){
 
         try {
 
-          const userFolderExists = fs.existsSync(targetAssetsPath)
+          const userFolderExists = fs.existsSync(targetAssetsPath);
       
           if ( userFolderExists ) {
         
@@ -537,7 +541,12 @@ function replaceSectionFromObject({ section, contentObject, day, numOfWeek }){
 
   return function( match ){
 
-    const { weekRegex, dayRegex } = wdxTemplateRegexes;
+    const { 
+      weekRegex,
+      weekNumRegex,
+      dayRegex,
+      dayNumRegex 
+    } = wdxTemplateRegexes;
 
     if ( !contentObject[section] ){
 
@@ -574,9 +583,30 @@ function replaceSectionFromObject({ section, contentObject, day, numOfWeek }){
 
     }
 
-    dailyScheduleSection = dailyScheduleSection.replace(weekRegex, `Week ${numOfWeek}`).replace(dayRegex, `Day ${day}`);
+    dailyScheduleSection = dailyScheduleSection
+    .replace(weekRegex, `Week ${numOfWeek}`)
+    .replace(weekNumRegex, `${numOfWeek}`)
+    .replace(dayNumRegex, `${String(day).padStart(2,"0")}`)
+    .replace(dayRegex, `Day ${day}`);
 
     return dailyScheduleSection;
+  }
+
+}
+
+// Deep Markdown Token parsing for Assets (./assets/*)
+function parseTokenForAssetAndPushToArray( token, hrefs ){
+  
+  if ( token.type === "link" ){
+    if ( token.href.indexOf("./assets") === 0 ){
+      hrefs.push(token.href);
+    }
+  }
+  if ( token.tokens ){
+    token.tokens.forEach( t => parseTokenForAssetAndPushToArray( t, hrefs ));
+  }
+  if ( token.items ){
+    token.items.forEach( t => parseTokenForAssetAndPushToArray( t, hrefs ));
   }
 
 }
@@ -586,11 +616,8 @@ function parseTokenForMediaAssets( token ){
 
   const hrefs = [];
 
-  if ( token.type === "list" && token.items ){
-    token.items.forEach( item =>{
-      // console.log( item );
-    })
-  }
+  // TODO: Probably this function can replace the following 2 if statements altogether as it parses all the MD Tree for links with ./assets
+  parseTokenForAssetAndPushToArray( token, hrefs );
 
   if ( token.type === "paragraph" ){
 
@@ -825,6 +852,35 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
 
 }
 
+function createExerciseFolders({ weeklyData, title, numOfWeek }){
+
+  weeklyData.forEach((dailyData, idx) =>{
+
+    const paddedDay = String(idx+1).padStart(2,"0");
+    const weeklyUserFolder = path.join(
+      "user",
+      `week${numOfWeek}`,
+      "exercises",
+      `day${paddedDay}`
+    );
+
+    const doesWeeklyUserFolderExist = fs.existsSync(weeklyUserFolder);
+
+    if ( doesWeeklyUserFolderExist ) {
+      warn(`Folder '${weeklyUserFolder}' already exists.`);
+    } else {
+      fs.mkdirSync(weeklyUserFolder, { recursive: true });
+      console.log(`Folder '${weeklyUserFolder}' created.`);
+    }
+    fs.writeFileSync(
+      path.join(weeklyUserFolder, ".gitkeep"), 
+      "", "utf-8"
+    );
+
+
+  })
+}
+
 function createWeeklyContentFromYaml({ configYaml, filename }) {
 
   const { input, daily_input, schedule, title } = yaml.parse(configYaml);
@@ -896,6 +952,11 @@ function createWeeklyContentFromYaml({ configYaml, filename }) {
 
     // Copy Media Assets from Module folder to curriculum/
     copyModuleMediaAssets({ weeklyData, title });
+
+    // Generate /user/weekXX/exercises/... folders
+    createExerciseFolders({
+      weeklyData, title, numOfWeek
+    }); 
 
     // Generate progress sheets:
     const csv = generateWeeklyProgressSheetFromWeeklyData({ 

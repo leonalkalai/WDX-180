@@ -8,22 +8,22 @@ schedule:
       module: version_control/git/branching_and_remote_git
       # TODO: STUDY: https://github.com/in-tech-gration/complete-intro-to-web-dev-v3/tree/main/lessons/03-css
     2: # What is CSS
-      # file://./../modules/css/what_is_css/index.md
-      module: css/what_is_css
+      # file://./../modules/css/misc/what_is_css/index.md
+      module: css/misc/what_is_css
     3: # CSS Selectors
-      # file://./../modules/css/css_selectors/index.md
-      module: css/css_selectors
+      # file://./../modules/css/selectors/css_selectors/index.md
+      module: css/selectors/css_selectors
       # TODO: INTEGRATE SELECTOR GAME
       # https://codepen.io/kostasx/pen/LYqNYyx
       # BOOTCAMP/INTECHGRATION/TASKS/css.selectors.exercise/index.html
     4: # Cascade, Inheritance and the Box Model
-      # file://./../modules/css/cascade_inheritance_box_model/index.md
-      module: css/cascade_inheritance_box_model
+      # file://./../modules/css/misc/cascade_inheritance_box_model/index.md
+      module: css/misc/cascade_inheritance_box_model
       # TODO: INTEGRATE SPECIFICITY GAME: https://codepen.io/kostasx/pen/zQyjdv
       # /BOOTCAMP/INTECHGRATION/TASKS/quiz-can-you-count-specificity/
     5: 
-      # file://./../modules/css/backgrounds_and_borders/index.md
-      module: css/backgrounds_and_borders
+      # file://./../modules/css/misc/backgrounds_and_borders/index.md
+      module: css/misc/backgrounds_and_borders
 
 # TODO: Add section about background-clip: How to add Transparent Borders
 # https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip
