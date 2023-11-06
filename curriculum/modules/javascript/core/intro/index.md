@@ -14,7 +14,7 @@ title: Introduction to JavaScript
 
   ![](./assets/js.magician.png)
 
-### JavaScript Intro
+#### JavaScript Intro
 
   This is a tough section to teach because the needs of the students vary quite widely here. Some of you are programmers from other languages coming here to learn front-end coding. Some of you are totally new to coding and JavaScript will be your first programming language. Just like if you know Spanish already, learning Italian becomes much easier since you take the same concepts and express them with minor variances. This workshop is optimized for those totally new to coding and thus we assume no prior knowledge. If you do know another programming language, we invite you instead to skim this section to familiarize yourself with how JavaScript looks. The next sections will also be aimed at you.
 
@@ -50,7 +50,7 @@ title: Introduction to JavaScript
   Let's get this little snippet working in our browser. Make a new folder (I'll just put it on my desktop) and add an index.html file with the following in it:
 
 
-  ```display-html
+  ```html
   <!DOCTYPE html>
   <html lang="en">
     <head>
@@ -65,7 +65,7 @@ title: Introduction to JavaScript
 
   That `script` tag is going to let us load JavaScript code into our HTML page. So make another file in the same folder called `experiments.js` (it really can be called anything as long as the script tag matches it.) Then in the JS file put our code from above:
 
-  ```display-javascript
+  ```javascript
   const monthlyRent = 500;
 
   const yearlyRent = monthlyRent * 12;
@@ -76,7 +76,7 @@ title: Introduction to JavaScript
 
 ---
 
-### Numbers, Strings and Booleans
+#### Numbers, Strings and Booleans
 
   So far we've just dealt with numbers. Let's go further and start working with words and characters. In programming, we refer to these things are strings, as in a string of one-letter characters. An example of this would be
 
@@ -112,7 +112,7 @@ title: Introduction to JavaScript
 
 ---
 
-### Control Flow
+#### Control Flow
 
   Sometimes I want to modify the flow of how my program works, or in other words, sometimes I only want to run code if some condition is true. This is where `if` statements are very useful. Imagine if we tried this.
 
@@ -161,7 +161,15 @@ title: Introduction to JavaScript
 
 ---
 
-### Loops
+#### Loops: behavior that repeats
+
+  In programming, we often times need to repeat part of our code, again and again. This repeating behavior is called a **Loop** in programming lingo.
+
+  The more geeky term for looping _(which you will also encounter again and again in programming manuals)_ is **iteration**.
+
+  - Watch a Microsoft engineer explain loops in the first part of [this video](https://www.youtube.com/embed/G8hfAk4PfOM?si=8N2UnFsPaim5YmTr&amp;start=0&end=109){:target="_blank"} and then move on.  
+
+  ---
 
   Okay so now what if I want to do one thing multiple times? I could do something like this
 
@@ -221,6 +229,8 @@ title: Introduction to JavaScript
   console.log(friendsAtYourParty);
   ```
 
+  [![](./assets/nikkisiapno.for.loop.jpeg)](./assets/nikkisiapno.for.loop.jpeg){:target="_blank"}
+
   This is a for loop which is likely the most common kind of loop. Inside the parens are three statements and you need all of them. The `let i = 0;` is you defining your control variable that will control the loop. For some reason, people always use `i`, not sure why. It's just that way. It really could be anything. The second statement `i <= 10` is just like the while loop, is that's the statement that as soon as it's false it breaks the loop. The last statement, `i++` happens at the end of every loop. In our case, we increment the control variable `i` so that it creeps closer to the end of the loop each time.
 
   An important note: in coding, we start counting from 0. In English, we count `1, 2, 3, 4, 5, etc.` but in coding, we count `0, 1, 2, 3, 4, etc.`. So the fifth element of a string is index 4 (where index is how we'd refer to where that item is in the string). Index 0 is the first element. It's weird but you get used to it and it makes a lot of things easier.
@@ -245,149 +255,19 @@ title: Introduction to JavaScript
 
   The following exercises are just to get you to flex your newly-gained muscles a bit. This code itself wouldn't be super useful but it'll be useful for you to try to take an idea in words and translate that into workable code.
 
-#### Task 1
+#### Task 1: Booleans in JavaScript
 
- In this task, we want you to copy and paste the following code in a file called `booleans.js` and complete the challenges found inside:
+ In this task, we want you to load the [booleans.js file](./exercises/booleans.js){:target="_blank"} from an HTML named `booleans.html` and complete the challenges found inside. 
 
- ```javascript
- /* 
-  ------------------------------------------------------------------------------------
-  Tutorial: Booleans in JavaScript
-  ------------------------------------------------------------------------------------
-  */
-  // Definition:-
-  // The boolean (not Boolean) is a primitive data type in JavaScript. It can have only two values: "true" or "false". 
-  // It is useful in controlling program flow using conditional statements.
+#### Task 2: Creating Variables
 
+ In this task, we want you to load the [creating-variables.js file](./exercises/creating-variables.js){:target="_blank"} from an HTML named `creating-variables.html` and complete the challenges found inside. 
 
-  // DECLARATION:-
-  let YES = true;
+#### Task 3: JavaScript Numbers
 
-  let NO = false;
+  In this task, we want you to load the [numbers.js file](./exercises/numbers.js){:target="_blank"} from an HTML named `numbers.html` and complete the challenges found inside. 
 
-  // CHECK TYPE OF VARIABLE WITH "typeof" OPERATOR:-
-  console.log(typeof(YES)); // will print "boolean" in the console
-  console.log(typeof(NO));  // will print "boolean" in the console
-
-  // COMPARISION OPERATORS AND BOOLEANS:-
-  // The comparison expressions return boolean values to indicate whether the comparison is "true" or "false". 
-  // For example, the following expressions return boolean values.
-  let result = 1 > 2; //result stores "false"
-
-  // BOOLEAN FUNCTION:-
-  // JavaScript provides the Boolean() function that converts other types to a boolean type.
-  // The value specified as parameter to the Boolean() function  will be converted to a boolean value.
-  // The Boolean() will return "true" for any non-empty, non-zero, object, or array and will return "false" otherwise.
-
-  let x = Boolean("Hello"); // x stores "true"
-  let y = Boolean(10);      // y stores "true"
-
-
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge:-
-  // 1. Check the boolean value of "0" and "-0" using the Boolean() function.
-  // 2. Check the boolean value of "" (empty string) using the Boolean() function. 
-  // 3. Check the boolean value of "[]" (empty array) using the Boolean() function. 
-  ------------------------------------------------------------------------------------
-  */
-  ```
-
-#### Task 2
-
-  In this task, we want you to copy and paste the following code in a file called `creating-variables.js` and complete the challenges found inside:
-
-  ```javascript
-  /* 
-  ------------------------------------------------------------------------------------
-  Tutorial: Create variables
-  ------------------------------------------------------------------------------------
-  */
-
-  // To create a variable in read-only mode is used const
-  const fruitConst = "Apple";
-  // If we try to modify the const for example fruit = 'Banana'; we will get an error that it is not possible to modify its value
-
-  // If we want to initialize a variable that we can modify its value we will use let
-  // The let statement declares a block-scoped local variable, optionally initializing it to a value.
-
-  let fruitLet = "Apple";
-  fruitLet = "Banana";
-
-  // We can also use var
-  // The var statement declares a function-scoped or globally-scoped variable, optionally initializing it to a value.
-
-  var fruitApple = "Apple";
-  fruitApple = "Banana";
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge: 1. Create a const variable and try to modify the value
-              2. Create a let variable and modify the value
-              3. Create a var variable and modify the value
-  ------------------------------------------------------------------------------------
-  */
-  ```
-
-#### Task 3
-
-  In this task, we want you to copy and paste the following code in a file called `numbers.js` and complete the challenges found inside:
-
-  ```javascript
-  /* 
-  ------------------------------------------------------------------------------------
-  Tutorial: JavaScript Numbers
-  ------------------------------------------------------------------------------------
-  */
-
-  // JavaScript has only one type of number. Numbers can be written with or without decimals. Negative numbers are declared by placing a minus (-) character before the number.
-
-  // DECLARATION:-
-  let x = 3.14; // A number with decimals
-  let y = 3; // A number without decimals
-  let z = -4; //A negative number
-
-
-  // Extra large or extra small numbers can be written with scientific (exponent) notation
-
-  // JavaScript Numbers are Always 64-bit Floating Point.
-  //JavaScript does not define different types of numbers, like integers, short, long, floating-point etc.
-
-  //PRECISION:-
-  //Integers are accurate up to 15 digits.Example:
-  let n = 999999999999999; // n will be 999999999999999
-  let m = 9999999999999999; // m will be 10000000000000000
-
-  //The maximum number of decimals is 17, but floating point arithmetic is not always 100% accurate.Example:
-  let p = 0.2 + 0.1; // p will be 0.30000000000000004
-
-  //NaN - Not a Number:-
-  // NaN is a JavaScript reserved word indicating that a number is not a legal number.
-  //Trying to do arithmetic with a non-numeric string will result in NaN.Example:
-  let d = 100 - "Apple"; // d will be NaN (Not a Number)
-
-  //However, if the string contains a numeric value , the result will be a number:
-  let c = 100 / "10"; // c will be 10
-
-  //Number() Function:-
-  //The Number() function is used to convert various data types to numbers. For example,
-  const a = '23'; // string
-  const b = true; // boolean
-
-  //converting to number
-  const result1 = Number(a);
-  const result2 = Number(b);
-
-  console.log(result1); // 23
-  console.log(result2); // 1
-
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge:-
-  // 1. Check the value of "x = 2/0" using the 'typeof' operator and logging the value to the console.
-  ------------------------------------------------------------------------------------
-  */
-  ```
-
+<!-- TODO: Move this Task to external files: -->
 #### Task 4
 
   In this task, we want you to copy and paste the following code in a file called `strings.js` and complete the challenges found inside:
@@ -532,6 +412,7 @@ title: Introduction to JavaScript
   */
   ```
 
+<!-- TODO: Move this Task to external files: -->
 #### Task 5
 
   In this task, we want you to create a file called `variables.js` and :
@@ -540,6 +421,7 @@ title: Introduction to JavaScript
   - Calculate the remainder of 29 ÷ 3, using **two variables**. Store the remainder to a **third variable**. Output the result to the console. Your final result should look like the following: `The remainder of X ÷ Y is Z`.
   - Store your birth year in **a variable**. Store the current year in **a variable**. Calculate your age based on the difference of the stored values. Output to the console the following string based on the result: `You are approximately X years old`.
 
+<!-- TODO: Move this Task to external files: -->
 #### Task 6
 
   In this task, we want you to create a file called `experiments.js` and:
@@ -556,26 +438,26 @@ title: Introduction to JavaScript
 
   **Content is based on the following sources:**
 
-  [Intro](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/A-intro.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/A-intro.md){:target="_blank"}
+  - [Intro](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/A-intro.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/A-intro.md){:target="_blank"}
 
-  [Numbers, Strings and Booleans](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/B-numbers-strings-and-booleans.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/B-numbers-strings-and-booleans.md){:target="_blank"}
+  - [Numbers, Strings and Booleans](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/B-numbers-strings-and-booleans.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/B-numbers-strings-and-booleans.md){:target="_blank"}
 
-  [Control Flow](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/C-control-flow.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/C-control-flow.md){:target="_blank"}
+  - [Control Flow](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/C-control-flow.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/C-control-flow.md){:target="_blank"}
 
-  [Loops](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/D-loops.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/D-loops.md){:target="_blank"}
+  - [Loops](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/D-loops.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/D-loops.md){:target="_blank"}
 
-  [Experiment exercise](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/E-exercise.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/E-exercise.md){:target="_blank"}
+  - [Experiment exercise](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/E-exercise.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/E-exercise.md){:target="_blank"}
 
   Please do not forget to ⭐ the [repo](https://github.com/btholt/complete-intro-to-web-dev-v3){:target="_blank"}!
 
   **Tasks 1 through 4 are based on the following sources:**
 
-  [TeachMeJavaScriptLikeIm5 booleans](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/2-variables/booleans.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/2-variables/booleans.js){:target="_blank"}
+  - [TeachMeJavaScriptLikeIm5 booleans](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/2-variables/booleans.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/2-variables/booleans.js){:target="_blank"}
 
-  [TeachMeJavaScriptLikeIm5 creating-variables](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/2-variables/creating-variables.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/2-variables/creating-variables.js){:target="_blank"}
+  - [TeachMeJavaScriptLikeIm5 creating-variables](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/2-variables/creating-variables.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/2-variables/creating-variables.js){:target="_blank"}
 
-  [TeachMeJavaScriptLikeIm5 numbers](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/2-variables/numbers.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/2-variables/numbers.js){:target="_blank"}
+  - [TeachMeJavaScriptLikeIm5 numbers](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/2-variables/numbers.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/2-variables/numbers.js){:target="_blank"}
 
-  [TeachMeJavaScriptLikeIm5 strings](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/2-variables/strings.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/2-variables/strings.js){:target="_blank"}
+  - [TeachMeJavaScriptLikeIm5 strings](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/2-variables/strings.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/2-variables/strings.js){:target="_blank"}
 
-  Please do not forget to ⭐ the [repo](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5)
+  Please do not forget to ⭐ the [repo](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5){:target="_blank"}!

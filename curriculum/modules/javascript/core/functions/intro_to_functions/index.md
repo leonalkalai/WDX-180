@@ -10,7 +10,7 @@ title: Intro to Functions
 
 ### Study Plan
 
-### Functions
+#### Functions
 
   A function is a bit of reusable code. Just as we like to re-use CSS classes, we love to re-use code. Let's start with an example:
 
@@ -49,6 +49,11 @@ title: Intro to Functions
 
   logOutYourHome(myHomeCity, myHomeState, myHomeCountry);
   ```
+  ---
+
+  Keep this next diagram by [Wes Bos](https://wesbos.com/){:target="_blank"} handy, as it depicts all the function parts with their respective terminology. It's always good to know our way around a function's inner parts.
+
+  [![](./assets/wes_bos_function_definition.jpg)](./assets/wes_bos_function_definition.jpg){:target="_blank"}
 
 #### Various Ways of Writing Functions
 
@@ -77,7 +82,7 @@ title: Intro to Functions
 
 ---
 
-### Scope
+#### Scope
 
   We'll talk about scope multiple times but we'll start off here with it. Every time you call a function, it has its own scope. Other things can't peek into it; it just has its own little workspace for it to work with. Once it's done, any variable that you haven't explicitly held on to or returned at the end is discarded. For example:
 
@@ -139,7 +144,7 @@ title: Intro to Functions
 
   This is a pretty convoluted example but see what you think. Once you're ready, the next block will be the answers.
 
-  ```display-javascript
+  ```javascript
   const A = "A";
   let F;
 
@@ -173,7 +178,7 @@ title: Intro to Functions
 
 ---
 
-### Built-ins
+#### Built-ins
 
   Lots of functions already exist for you! Smart people have created these commonly-used functions for things we often need. For example, say you have a string and you want to make everything lowercase, you can do this:
 
@@ -556,4 +561,4 @@ title: Intro to Functions
 
   [TeachMeJavaScriptLikeIm5 higher-order-functions](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/8-functions/higher-order-functions.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/8-functions/higher-order-functions.js){:target="_blank"}
 
-  Please do not forget to ⭐ the [repo](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5)
+  Please do not forget to ⭐ the [repo](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5){:target="_blank"}!

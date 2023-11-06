@@ -13,10 +13,15 @@
     integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="{{ '/assets/jekyll/js/main.js' | relative_url }}"></script>
 
+  <link rel="icon" type="image/png" href="{{ '/assets/jekyll/images/favicon.png' | relative_url }}"/>
+
   <!-- 
       <script src="{{ '/assets/jekyll/js/respond.js' | relative_url }}"></script> 
     -->
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <!-- Google Web Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,500,500i,700" rel="stylesheet">
 
   <!-- Load CSS from Frontmatter 'load_css' property -->
   {% for css in page.load_css %}
