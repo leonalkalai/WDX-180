@@ -22,12 +22,17 @@
   --details-border-color: gray;
   --details-border-left-color: #ffcc00;
   --details-bg-color: #343333;
+
+  --max-width: 780px;
   
 }
 
 body {
   font-family: var(--font-family);
   font-size: 16px;
+}
+.wrapper, .main-section {
+  max-width: var(--max-width);
 }
 
 //>>> UTILITY CLASSES <<<//
@@ -219,4 +224,23 @@ section.main-section li {
 
 .summary-day {
   color: var(--secondary-color);
+}
+
+// FLEMS CODE SECTIONS
+a[href="#flems-enable"] {
+  background: yellowgreen;
+  color: black;
+  padding: 0.5rem 2rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  transition: all 200ms linear;
+}
+a[href="#flems-enable"]:hover {
+  color: white;
+  background: darkgreen;
+}
+.wdx-flems-editor {
+  margin-top: 1rem;
+  border-top: 10px solid yellowgreen;
+  box-shadow: 6px 16px 24px rgba(0,0,0,0.7);
 }
