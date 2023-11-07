@@ -2,9 +2,11 @@
 title: Week 05 | CSS Frameworks
 ---
 
-# Week 05 | CSS Frameworks
+<h1 id="{{ Week 05-CSS Frameworks | slugify }}">
+  <span class="week-prefix">Week 05 |</span> CSS Frameworks
+</h1>
 
-_(Updated: 5/11/2023)_
+_(Updated: 7/11/2023)_
 
 ---
 
@@ -133,6 +135,8 @@ We are basically creating a single `<input>` form field of type `text`. In the s
   - [Extra Resources](#extra-resources-NN)
 
 ### Study Plan
+
+  ![](./assets/FlappyAppThumbnail.jpg)
 
   **Flappy App**: Recreating a web page from a design mockup
 
@@ -329,7 +333,9 @@ We are basically creating a single `<input>` form field of type `text`. In the s
 
 ### Study Plan
 
-This is Day 2 of the Flappy App practice. Just follow the instructions found on Day 1 and continue where you've left off.
+  ![](./assets/FlappyAppThumbnail.jpg)
+
+  This is Day 2 of the Flappy App practice. Just follow the instructions found on Day 1 and continue where you've left off.
 
 <!-- Summary -->
 
