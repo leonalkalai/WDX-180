@@ -96,6 +96,8 @@ title: Intro to Arrays
   });
   ```
 
+  [&#9658; Live coding](#flems-enable)
+
   The first way, using a for loop, is using that `i` control variable which gets incremented each loop. We use that `i` to access each item in the array on each iteration of the loop. We have the loop to stop when `i` gets equal to the `length` of cities. Very useful pattern. You'll see it a lot.
 
   The second way is using a function that arrays have called `forEach`. This `forEach` method takes in a function and that function will be called once on each item of the array. It will pass that item into the function, which is what `city` is in this situation. Both are useful patterns to know. You'll use both frequently. While you're getting started, just use the one you feel comfortable with. They have different things that make them preferable in different situations but usually you can use either. Method 2 may be a bit more advanced but I don't think you should be scared of it. For now prefer method 1. I just wanted you to see method 2.
@@ -127,6 +129,12 @@ title: Intro to Arrays
   <!-- WDX:META:PROGRESS:task=Complete the exercise 'Properties and Methods of JavaScript Arrays'|user_folder=task_4 -->
   <!-- WDX:META:TESTS:name=Test Exercise: 'Properties and Methods of JavaScript Arrays'|type=exist|user_folder=task_4|files=properties-and-methods-of-arrays.js,properties-and-methods-of-arrays.html -->
   In this task, we want you to load the [properties-and-methods-of-arrays.js](./exercises/properties-and-methods-of-arrays.js){:target="_blank"} from an HTML named `properties-and-methods-of-arrays.html` and complete the challenges found inside.
+
+#### Task 5: Test your skills: JavaScript Arrays
+
+  <!-- WDX:META:PROGRESS:task=Complete the exercise 'Test your skills: JavaScript Arrays'|user_folder=task_5 -->
+  <!-- WDX:META:TESTS:name=Test Exercise: 'Test your skills: JavaScript Arrays'|type=exist|user_folder=task_5|files=arrays-skills.js,arrays-skills.html -->
+  In this task, we want you to load the [arrays-skills.js](./exercises/arrays-skills.js){:target="_blank"} from an HTML named `arrays-skills.html` and complete the challenges found inside.
 
 ### Extra Resources
 
