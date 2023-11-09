@@ -9,7 +9,7 @@ load_script_js_via_src:
   <span class="week-prefix">Week 06 |</span> JavaScript Core 1
 </h1>
 
-_(Updated: 8/11/2023)_
+_(Updated: 9/11/2023)_
 
 ---
 
@@ -1544,6 +1544,8 @@ _(Updated: 8/11/2023)_
   console.log(courses);
   ```
 
+  <a href="#flems-enable" class="flems-button">&#9658; Live coding</a>
+
   The first thing we do is add an element to the end using the push function that arrays have. It "pushes" the element on the end.
 
   Below that, we're overriding index 2 with a new course. This will throw away what was there before and set it to be what we've set it to be.
@@ -1570,7 +1572,7 @@ _(Updated: 8/11/2023)_
   });
   ```
 
-  [&#9658; Live coding](#flems-enable)
+  <a href="#flems-enable" class="flems-button">&#9658; Live coding</a>
 
   The first way, using a for loop, is using that `i` control variable which gets incremented each loop. We use that `i` to access each item in the array on each iteration of the loop. We have the loop to stop when `i` gets equal to the `length` of cities. Very useful pattern. You'll see it a lot.
 

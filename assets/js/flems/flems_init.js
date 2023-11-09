@@ -5,7 +5,8 @@
 
     console.log('Flem initialization...');
 
-    const mainSectionEl = document.querySelector(".main-section");
+    // Changed from .main-section to .flems-button to avoid listening to false click events
+    const flemsButtonEl = document.querySelector(".flems-button");
     const flemsEnableButtonHREF = "#flems-enable";
     // TODO: Implement Fullscreen mode:
     // ELEMENT.exitFullscreen() 
@@ -13,12 +14,12 @@
 
     try {
 
-      if (!mainSectionEl) {
-        throw new Error("No .main-section element found.");
+      if (!flemsButtonEl) {
+        throw new Error("No .flems-button element found.");
         return false;
       }
 
-      mainSectionEl.addEventListener("click", e => {
+      flemsButtonEl.addEventListener("click", e => {
 
         const { target } = e;
 
@@ -54,7 +55,8 @@
         target.insertAdjacentElement("afterEnd", codeEditor);
 
         // Initialize JavaScript Code Playground:
-        if ( parentSiblingCodeSection.classList.contains("language-js") ){
+        // Check for both language-js and language-javascript classes.
+        if ( parentSiblingCodeSection.classList.contains("language-js") || parentSiblingCodeSection.classList.contains("language-javascript") ){
 
           const flems = Flems(codeEditor, {
             files: [{
