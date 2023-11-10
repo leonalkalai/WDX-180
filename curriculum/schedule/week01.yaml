@@ -3,22 +3,23 @@ daily_input: curriculum/schedule/daily.draft.md
 title: Introduction to the Web and Web Technologies
 schedule: 
   days:
-    1:
+    1: # Basics of Computing
       # file://./../modules/computer_science/misc/basics_of_computing/index.md
       module: computer_science/misc/basics_of_computing
-    2: 
+    2: # The Internet and the Web
       # file://./../modules/computer_science/internet/www/how_the_internet_and_the_web_works/index.md
       module: computer_science/internet/www/how_the_internet_and_the_web_works
-    3: 
+    3: # HTML In a Day
       # file://./../modules/html/misc/html_in_a_day/index.md
       module: html/misc/html_in_a_day
       # TODO: INTEGRATE: https://russmaxdesign.github.io/maxdesign-slides/01-html/106-creating-document.html#/
-    4: 
+    4: # CSS In a Day
       # file://./../modules/css/misc/css_in_a_day/index.md
       module: css/misc/css_in_a_day
+    # TODO: REPLACE THIS WITH AN EASIER INTRO TO JS 
     5: # JavaScript in a Day
-      # file://./../modules/javascript/javascript_in_a_day/index.md
-      module: javascript/javascript_in_a_day
+      # file://./../modules/javascript/misc/javascript_in_a_day/index.md
+      module: javascript/misc/javascript_in_a_day
 
 # TODO: Add common beginner mistakes in HTML language syntax:
 # 1) Improper Tag Spacing + No indentation

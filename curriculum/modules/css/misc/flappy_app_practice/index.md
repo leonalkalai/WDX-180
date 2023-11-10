@@ -86,7 +86,7 @@ title: Flappy App - Day 1
       - How to load [Google Web Fonts](https://fonts.google.com/specimen/Lato?query=Lato){:target="_blank"} into an HTML page.
       - Use the `Format Document` feature of VSCode to keep your code well-formatted
 
-  - Part 6: [Containers](https://www.youtube.com/watch?v=qdP5WY0WWfw) 
+  - Part 6: [Containers](https://www.youtube.com/watch?v=qdP5WY0WWfw){:target="_blank"} 
     - **Duration:** 9min
     - **Description:** Define containers within the design to restrict the maximum width of the main content sections.
     - **What you'll learn:** 
@@ -182,10 +182,18 @@ title: Flappy App - Day 1
 
 ### Summary
 
+  **Insights**
+
+  By going through the FlappyApp challenge, you'll be able to learn about how to think in boxes and more specifically how you can decompose a design mockup into the basic HTML elements that make up the layout. You'll gradually start to detect the basic rows and columns in each image or design that you see out there, then go deeper and find the nested rows and columns so you can use the power of CSS rules to lay out the various sections and elements of the design.
+
+  You'll be able to understand the power and usefulness of utility classes, that will help you reuse your CSS styling across your HTML just by applying these classes as values to the HTML class attribute. Popular CSS libraries like Tailwind are based on this concept.
+
+  Another insight that you'll probably gain from this project is the way to organize your HTML and CSS. Your CSS selectors should be laid out hierarchically and according to the HTML structure. If your page has a `<header>`, `<main>` and `<footer>` sections, then your CSS selectors must follow that order too so that you can quickly find the selectors that update the styling of each section in your HTML.
+
 ### Exercises
 
 ### Extra Resources
 
 ### Sources and Attributions
 
-  - [Flappy App Project by the `devleague`](https://github.com/devleague/Flappy_App) (Make sure to star the repo if you liked this challenge)
+  - [Flappy App Project by the `devleague`](https://github.com/devleague/Flappy_App){:target="_blank"} (Make sure to star the repo if you liked this challenge)

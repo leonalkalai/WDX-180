@@ -11,7 +11,6 @@ const fs   = require("node:fs");
 const fse  = require('fs-extra');
 const { parseArgs } = require("node:util");
 const marked = require("marked");
-const chalk  = require("chalk");
 const matter = require('gray-matter');
 const yaml = require('yaml');
 const { parse, stringify } = require("csv/sync");
@@ -21,72 +20,30 @@ const {
   info,
   xmark,
   checkmark
+} = require("../utils");
+
+const { 
+  wdxTemplateRegexes,
+  getFrontMatterStringFromObject,
+  getInclude,
+  replaceInclude 
 } = require("./utils");
-const wdxTemplateRegexes = {
 
-  // TODO: weekRegex will be replaced by weekFullRegex and weekNumRegex
-  weekRegex:          /\{\{\s?WDX:\s?WEEK\s?\}\}/gi,
-  weekNumRegex:       /\{\{\s?WDX:\s?WEEK_NUM\s?\}\}/gi,
-  weekFullRegex:      /\{\{\s?WDX:\s?WEEK_FULL\s?\}\}/gi,
-  titleRegex:         /\{\{\s?WDX:\s?TITLE\s?\}\}/gi,
-  // TODO: dayRegex will be replaced by dayFullRegex and dayNumRegex
-  dayRegex:           /\{\{\s?WDX:\s?DAY\s?\}\}/gi,
-  dayFullRegex:       /\{\{\s?WDX:\s?DAY_FULL\s?\}\}/gi,
-  dayNumRegex:        /\{\{\s?WDX:\s?DAY_NUM\s?\}\}/gi,
-  scheduleRegex:      /\{\{\s?WDX:\s?DAILY_SCHEDULE\s?\}\}/gi,
-  studyPlanRegex:     /\{\{\s?WDX:\s?STUDY_PLAN\s?\}\}/gi,
-  summaryRegex:       /\{\{\s?WDX:\s?SUMMARY\s?\}\}/gi,
-  exercisesRegex:     /\{\{\s?WDX:\s?EXERCISES\s?\}\}/gi,
-  extrasRegex:        /\{\{\s?WDX:\s?EXTRAS\s?\}\}/gi,
-  attributionsRegex:  /\{\{\s?WDX:\s?ATTRIBUTIONS\s?\}\}/gi,
-  includesRegex:      /\{\{\s?WDX:\s?INCLUDES:(.*)\s?\}\}/gi,
-  moduleRegex:        /\{\{\s?WDX:\s?MODULE:(.*)\s?\}\}/gi,
-  dateUpdatedRegex:   /\{\{\s?WDX:\s?DATE_UPDATED\s?\}\}/gi,
-  weeklyContentRegex: /\{\{\s?WDX:\s?WEEKLY_CONTENT\s?\}\}/gi,
-  wdx: {
-    meta: {
-      progress: /<!-- WDX:META:PROGRESS:(?<params>.*) -->\n/i,
-      tests: /<!-- WDX:META:TESTS:(?<params>.*) -->\n/i,
-    }
-  }
-
-}
-const MODULES_FOLDER  = path.join("curriculum", "modules");
-const INCLUDES_FOLDER = path.join("curriculum", "schedule", "includes");
+const { 
+  SCHEDULE,
+  EXTRA_RESOURCES,
+  EXERCISES,
+  STUDY_PLAN, SUMMARY,
+  ATTRIBUTIONS,
+  MODULES_FOLDER 
+} = require("./constants");
 
 // TODO:
 // 1) Warn about #### inside the ### Module sections. Use **Bold** instead.
 // 2) Add a `--no-user` flag to run the sgen tool without creating the user/ folder and subsequent subfolders
 
-// SECTIONS CONSTANTS:
-const SCHEDULE        = "Schedule";
-const EXTRA_RESOURCES = "Extra Resources";
-const STUDY_PLAN      = "Study Plan";
-const SUMMARY         = "Summary";
-const EXERCISES       = "Exercises";
-const ATTRIBUTIONS    = "Sources and Attributions"
 
 // 1) OUR FUNCTIONS: ===========================================================
-
-// APPEND FRONTMATTER TO THE OUTPUT FILE:
-function getFrontMatterStringFromObject(fm, liveCodeEnabled=false) {
-
-  const fmEntries = Object.entries(fm);
-  let fmString = "";
-  if (fmEntries.length !== 0) {
-    fmString += "---\n";
-    fmEntries.forEach(line => {
-      fmString += `${line[0]}: ${line[1]}\n`
-    });
-    if ( liveCodeEnabled ) {
-      // Include the following content to enable live coding 
-      fmString += "load_script_js_via_src:\n  - flems/flems.html\n  - flems/flems_init.js\n";
-    }
-    fmString += "---\n";
-  }
-  return fmString;
-
-}
 
 function createSyllabusEntries(syllabus, messages) {
 
@@ -180,64 +137,9 @@ function createSyllabusFromMarkdownText({ configYaml, textContent }) {
 
 }
 
-function getInclude({ file, day, numOfWeek }){
-
-  const {
-
-    weekRegex,
-    weekFullRegex,
-    dayRegex
-
-  } = wdxTemplateRegexes;
-
-  const includeFile = path.join( INCLUDES_FOLDER, file.trim() + ".md" );
-
-  try {
-
-    const contents = fs.readFileSync(includeFile, "utf-8");
-    return contents
-    .replace(weekRegex,String(numOfWeek).padStart(2,"0"))
-    .replace(weekFullRegex, `Week ${numOfWeek}`)
-    .replace(dayRegex, String(day).padStart(2,"0"));
-
-  } catch(e) {
-
-    console.log(e);
-    return `<!-- Missing include file: ${file.trim()}.md -->`
-
-  }
-
-}
-
 // TODO: WiP
 function getModule({}){
 
-}
-
-function replaceInclude({ day, numOfWeek } = {}){
-
-  return function( match, group1, string){
-
-    return getInclude({ 
-      file: group1, 
-      day: String(day).padStart(2,"0"), 
-      numOfWeek: String(numOfWeek).padStart(2,"0") 
-    });
-
-  }
-}
-
-function printColoredCSV( csv, SEPARATOR = "," ){
-  const colors = [ "white", "magenta", "green", "yellow", "blue", "magentaBright", "red", "cyan" ];
-  console.log();
-  csv.split("\n").forEach( line =>{
-    let str = [];
-    line.split(SEPARATOR).forEach((col,index) =>{
-      str.push(`${chalk[colors[index]](col)}`);
-    });
-
-    console.log(str.join(","));
-  }) 
 }
 
 // Mini-parsers: (to be moved elsewhere and unit-tested)
@@ -709,6 +611,26 @@ function parseTokenForMediaAssets( token ){
 
 }
 
+
+/**
+ * function parseTokenForLiveCoding
+ * parses token for [&#9658; Live coding](#flems-enable) used with flems
+ * 
+ * @params token: string
+ * @return True if link found, False otherwise
+ */
+function parseTokenForLiveCoding( token ) {
+
+  // TODO: Maybe need to go deeper than one level
+  // TODO: Add toggle on/off functionality
+  if ( token.type === "paragraph" && token.tokens.some(t => t.type === "link" && t.href === "#flems-enable") ) {
+    return true;
+  }
+
+  return false;
+
+}
+
 function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
 
   const [ day, dayMeta ] = entry;
@@ -767,12 +689,8 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
       })
     }
 
-    // TODO: Maybe need to go deeper than one level
-    // TODO: Make sure that flems is enabled when only a markdown link is present
-    // TODO: Make sure that flems is not enabled when #flems-enable is present as plain HTML content (not a link)
-    // TODO: Add toggle on/off functionality
-    if ( token.type === "paragraph" && token.tokens.some(t => t.type === "link" && t.href === "#flems-enable") ) {
-      liveCodeEnabled = true;
+    if (!liveCodeEnabled) {
+      liveCodeEnabled = parseTokenForLiveCoding(token);
     }
 
     if ( token.type === "heading" && token.depth === 3 ){
