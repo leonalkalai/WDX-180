@@ -12,4 +12,8 @@ title: Flappy App - Day 2
 
   ![](./assets/FlappyAppThumbnail.jpg)
 
-  This is Day 2 of the Flappy App practice. Just follow the instructions found on Day 1 and continue where you've left off.
+  This is Day 2 of the Flappy App practice. Just follow the instructions and continue where you've left off.
+
+### Exercises
+
+  <!-- WDX:META:PROGRESS:task=Recreate the FlappyApp with the help of your notes and the video -->
