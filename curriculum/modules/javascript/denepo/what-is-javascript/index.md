@@ -127,9 +127,7 @@ title: What is JavaScript?
     libraries or support for game development. These include
     [code.org](https://code.org/){:target="_blank"} (develop and play games with JS),
     [editor.p5js.org](https://editor.p5js.org/){:target="_blank"} (create interactive artwork),
-    [PencilCode](https://pencilcode.net/edit/myprogram){:target="_blank"} (write your code as blocks
-    or text), [Ocelot](https://code.ocelot-ide.org/){:target="_blank"} (disallows "bad" language
-    features and has helpful error messages).
+    [PencilCode](https://pencilcode.net/edit/myprogram){:target="_blank"} (write your code as blocks or text).
 
   ---
 
@@ -150,11 +148,9 @@ title: What is JavaScript?
 
   - [javascript.info/intro](https://javascript.info/intro){:target="_blank"}
   - [The Net Ninja](https://www.youtube.com/watch?v=VB7y0yxZjro){:target="_blank"}
-  - [MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript){:target="_blank"}
   - [Andrew Mosh](https://www.youtube.com/watch?v=W6NZfCO5SIk){:target="_blank"} \(first 5 minutes\)
   - [Code School](https://www.youtube.com/watch?v=nItSSTwBvSU){:target="_blank"}
   - [MDN: First Steps](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript){:target="_blank"}
-  - [javascript.info](https://javascript.info/intro){:target="_blank"}
   - [Danielle Thé](https://www.youtube.com/watch?v=gT0Lh1eYk78){:target="_blank"}
 
   ---
@@ -208,7 +204,6 @@ title: What is JavaScript?
 
   - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/ch1.md#backwards--forwards){:target="_blank"}
   - [Why is JavaScript backwards compatible to a fault?](https://stackoverflow.com/questions/4937245/why-is-javascript-backwards-compatible-to-a-fault){:target="_blank"}
-  - [edytawrobel](https://www.edytawrobel.com/js-compatibility/){:target="_blank"}
   - [tonsky.me](https://tonsky.me/blog/compatibility/){:target="_blank"}
   - [rohitdhatrak](https://www.rohitdhatrak.com/backwards-forwards-compatibility/){:target="_blank"}
   - [Chrome Breaks the Web](https://www.theregister.com/2021/10/04/chrome_breaks_web/){:target="_blank"}

@@ -32,7 +32,7 @@ title: Flappy App - Day 1
 
   It's recommended that you create 2 separate folders and VSCode workspaces for these last 2 steps. 
 
-  All the videos can be found in this _(unlisted*)_ [**YouTube playlist**](https://www.youtube.com/playlist?list=PLdo7hJB0agEmTY9xT7EvzUkClAeAHJr9G).
+  All the videos can be found on this [**YouTube playlist**](https://www.youtube.com/playlist?list=PLdo7hJB0agEmTY9xT7EvzUkClAeAHJr9G).
 
   Good luck!
 
@@ -182,6 +182,15 @@ title: Flappy App - Day 1
     - Use the W3C Validator services to make sure that your HTML and CSS do not contain any warnings or errors.
       - [HTML Validator](https://validator.w3.org/){:target="_blank"}
       - [CSS Validator](https://jigsaw.w3.org/css-validator/){:target="_blank"}
+
+  ---
+
+  **Found a content problem with this page? Want to contribute?** 
+  
+  - [Join the discussion here](https://github.com/in-tech-gration/WDX-180/discussions/categories/flappyapp-challenge)
+  - [View the source code](https://github.com/in-tech-gration/WDX-180/blob/main/curriculum/modules/css/misc/flappy_app_practice/index.md)
+  - [Report an issue](https://github.com/in-tech-gration/WDX-180/issues)
+  - [Edit the page on GitHub](https://github.com/in-tech-gration/WDX-180/blob/main/curriculum/modules/css/misc/flappy_app_practice/index.md)
 
 ### Summary
 
