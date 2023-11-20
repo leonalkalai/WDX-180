@@ -27,7 +27,7 @@ load_script_js_via_src:
 
   </h2>
 
-  <span>Updated: 16/11/2023</span>
+  <span>Updated: 19/11/2023</span>
 
   <h2 class="week-controls__next_week">
 
@@ -935,6 +935,47 @@ load_script_js_via_src:
 
   **Predictive Stepping:** Practice predicting each step of program execution, using your browser's debugger to check your predictions every step of the way.
 
+  In order to follow the material, you will need to install and use the `study-lenses` tool. Here are the instructions:
+
+  
+  **Setting up Study Lenses (v2) on your System**
+  
+  1. Clone the `study-lenses` repository from this link: [ https://github.com/in-tech-gration/study-lenses/](https://github.com/in-tech-gration/study-lenses/){:target="_blank"}.
+      - `git clone git@github.com:in-tech-gration/study-lenses.git`
+  
+  2. Change to the `study-lenses` directory and install all dependencies:
+  
+      - Run: `cd study-lenses`
+      - Then: `npm install` (or `npm i` for short)
+  
+  3. Checkout to the `lenses2` branch and run the `npm link` command to make this available globally:
+  
+      - `git checkout lenses2`
+      - `npm link` 
+      - (or if you're on a Mac/Linux, you'll perhaps need `sudo npm link`)
+  
+  4. Check that `study-lenses` have been successfully installed on your system by running the following command:
+  
+      - `lenses2 --version` or `lenses2 -v`
+
+  **Launching Study Lenses and following the material**
+
+  Once `lenses2` is properly installed on your system, clone the [repository that contains the study material](https://github.com/in-tech-gration/predictive-stepping){:target="_blank"} on your system and run `lenses2` to go follow the material:
+
+  - `git clone git@github.com:in-tech-gration/predictive-stepping.git`
+  - `cd predictive-stepping`
+  - `lenses2`
+
+  - [Watch: **Predictive Stepping** (Part 1)](https://youtu.be/GAjQbsqTt4A){:target="_blank"}
+    - **Duration:** 50min
+    - **Level:** Beginner
+
+  - [Watch: **Predictive Stepping & Debugging** (Part 2)](https://youtu.be/5K1qIa_fCgc){:target="_blank"}
+    - **Duration:** 55min
+    - **Level:** Beginner
+
+  Use the study material [found here](https://github.com/in-tech-gration/predictive-stepping){:target="_blank"} and work on the exercises.
+
 <!-- Summary -->
 
 <!-- Exercises -->
@@ -949,7 +990,3 @@ load_script_js_via_src:
 <hr class="mt-1">
 
 **Weekly feedback:** Hey, it's really important for us to know how your experience with the course has been so far, so don't forget to fill in and submit your [**mandatory** feedback form](https://forms.gle/S6Zg3bbS2uuwsSZF9){:target="_blank"} before the day ends. Thanks you!
-
-## Week 06 - Weekend Suggestions
-
-If you are in the mood of enjoying related content during the weekend, check out our weekly recommendations [here](WEEKEND.md).
