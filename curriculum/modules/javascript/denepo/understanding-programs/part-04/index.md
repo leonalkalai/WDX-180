@@ -12,15 +12,18 @@ title: Understanding Programs - Part 4
 
   In this Module, we are continuing our journey into "Understanding Programs"
 
-  Make sure to follow the guides on **Setting up Study Lenses (v2) on your System** and 
-  **Launching Study Lenses and following the material** from [Week 07 Day 01](https://in-tech-gration.github.io/WDX-180/curriculum/week07/){:target="_blank"} and then go through the following sections:
+  Make sure to follow the guides on **Setting up Study Lenses (v2) on your System** and **Launching Study Lenses and following the material** from Day 01 and then go through the following sections:
 
-  - **8-naming-variables**
-  - **9-code-review**
+  - **7-naming-variables**
+  - **8-code-review**
 
 ### Summary
 
 ### Exercises
+
+  <!-- SGEN:META:PROGRESS:task=Explore the '7-naming-variables' section of 'Understanding Programs' -->
+
+  <!-- SGEN:META:PROGRESS:task=Explore the '8-code-review' section of 'Understanding Programs' -->
 
 ### Extra Resources
 
