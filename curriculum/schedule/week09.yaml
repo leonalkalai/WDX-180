@@ -3,25 +3,24 @@ daily_input: curriculum/schedule/daily.draft.md
 title: JavaScript Core 3
 schedule: 
   days:
-    1: # Functions
-      # file://./../modules/javascript/core/functions/index.md
-      module: javascript/core/functions
-    2: # Functions
-      # file://./../modules/javascript/core/
-      module: javascript/core/
-    3: # Arrays
-      # file://./../modules/javascript/core/arrays/index.md
-      module: javascript/core/arrays
-    4: # Arrays
-      # file://./../modules/javascript/core/
-      module: javascript/core/
-    5: # Objects
-      # file://./../modules/javascript/core/objects/index.md
-      module: javascript/core/objects
+    1: # Functions 1
+      # file://./../modules/javascript/denepo/inside-js/functions-part-1.md
+      module: javascript/denepo/inside-js/functions-part-1.md
+    2: # Functions 2
+      # file://./../modules/javascript/denepo/inside-js/functions-part-2.md
+      module: javascript/denepo/inside-js/functions-part-2.md
+    3: # Arrays 1
+      # file://./../modules/javascript/denepo/inside-js/arrays-part-1.md
+      module: javascript/denepo/inside-js/arrays-part-1.md
+    4: # Arrays 2
+      # file://./../modules/javascript/denepo/inside-js/arrays-part-2.md
+      module: javascript/denepo/inside-js/arrays-part-2.md
+    5: # Objects 1
+      # file://./../modules/javascript/denepo/inside-js/objects-part-1.md
+      module: javascript/denepo/inside-js/objects-part-1.md
 
 # ---
 
-# https://github.com/in-tech-gration/welcome-to-js/tree/main/4-developing-programs
 # Remove: https://github.com/in-tech-gration/welcome-to-js/blob/main/printing-code.mp4
 
 # TODO: Add Priorities to start of Week 07?
