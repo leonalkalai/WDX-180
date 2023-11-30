@@ -67,7 +67,7 @@
   1) changed const 'w' to 'fullWeekDays'
   2) changed 2 lines week array to one line
   3) added ; after week array assignment
-  4) changed data to noneWeekendDays
+  4) changed data to 'weekDays'
   5) change d to currentDate
   6) add indentation to both 'if'
   7) changed the closing curly bracket of internal if to a new line and added indentation to it
