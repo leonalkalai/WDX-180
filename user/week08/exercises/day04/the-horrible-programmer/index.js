@@ -64,7 +64,7 @@
   
 ****Developer's Changes****
 
-  1) changed const 'w' to 'week'
+  1) changed const 'w' to 'fullWeekDays'
   2) changed 2 lines week array to one line
   3) added ; after week array assignment
   4) changed data to noneWeekendDays
@@ -78,15 +78,15 @@
 
 */
 
-const week = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ]; // array of days
-const noneWeekendDays = week.slice(1,6); // none weekend days
+const fullWeekDays  = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ]; // array of days
+const weekDays = fullWeekDays.slice(1,6); // none weekend days
 document.write(`<ul>`); // open ul
 const currentDate = new Date(); // current date
 const today = currentDate.getDay(); // current day index
  
-for ( const day of noneWeekendDays ){ // iterate through none weekend days
+for ( const day of weekDays ){ // iterate through none weekend days
   if ( today > 1 && today < 6 ) { // check if today between 2nd and 5th day of week
-    if ( week[today] === day ){ // check if current day is equal to each day of week 
+    if ( fullWeekDays [today] === day ){ // check if current day is equal to each day of week 
        document.write( `<li><strong>${day}</strong></li>` ); // display current date with bold
        continue; // continue
     }
