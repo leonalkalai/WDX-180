@@ -1,11 +1,11 @@
 ---
-title: Week 11 | Web APIs 2: Promises, JSON, Fetch API, Web Storage, Media
+title: Week 11 | Web APIs 2: Promises, JSON, Fetch API
 ---
 
 <hr class="mb-0">
 
-<h1 id="{{ Week 11-Web APIs 2: Promises, JSON, Fetch API, Web Storage, Media | slugify }}">
-  <span class="week-prefix">Week 11 |</span> Web APIs 2: Promises, JSON, Fetch API, Web Storage, Media
+<h1 id="{{ Week 11-Web APIs 2: Promises, JSON, Fetch API | slugify }}">
+  <span class="week-prefix">Week 11 |</span> Web APIs 2: Promises, JSON, Fetch API
 </h1>
 
 <div class="week-controls">
@@ -24,7 +24,7 @@ title: Week 11 | Web APIs 2: Promises, JSON, Fetch API, Web Storage, Media
 
   </h2>
 
-  <span>Updated: 29/11/2023</span>
+  <span>Updated: 4/12/2023</span>
 
   <h2 class="week-controls__next_week">
 
@@ -57,6 +57,46 @@ title: Week 11 | Web APIs 2: Promises, JSON, Fetch API, Web Storage, Media
 
 ### Study Plan
 
+<!-- TODO: Keep this structure and create SGEN feature for link creation of units/modules -->
+
+
+- [Read: **Introduction to JSON**](../modules/javascript/core/json/30-days-of-javascript/){:target="_blank"}
+
+### Summary
+
+  🌕 You are extraordinary. You know a light-weight data format which you may use to store data or to send it an HTTP server. Now do some exercises for your brain and for your muscle.
+
+### Exercises
+
+  Copy the [json.js](./exercises/json.js) file and load it on an HTML file called `json.html` and compete all the challenges found inside.
+
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week11/progress/progress.draft.w11.d01.csv**
+
+  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
+
+### Extra Resources
+
+  _(Nothing here yet. Feel free to contribute if you've found some useful resources.)_
+
+### Sources and Attributions
+
+  **Content is based on the following sources:**
+
+  - [30 Days Of JavaScript: JSON](https://github.com/in-tech-gration/30-Days-Of-JavaScript/blob/master/16_Day_JSON/16_day_json.md){:target="_blank"} [(Permalink)](https://github.com/in-tech-gration/30-Days-Of-JavaScript/blob/55d8e3dbc0410d64c1dc3ea5915e015a7950cf2a/16_Day_JSON/16_day_json.md){:target="_blank"}
+
+  Don't forget to star this awesome [repo](https://github.com/Asabeneh/30-Days-Of-JavaScript){:target="_blank"}!
+  
+</details>
+
+<hr class="mt-1">
+
+<!-- Week 11 - Day 2 | Introduction to Promises -->
+<details markdown="1">
+  <summary>
+    <h2>
+      <span class="summary-day">Week 11 - Day 2</span> | Introduction to Promises</h2>
+  </summary>
 
 ### Schedule
 
@@ -66,20 +106,10 @@ title: Week 11 | Web APIs 2: Promises, JSON, Fetch API, Web Storage, Media
 
 ### Study Plan
 
-  30 Days Of JavaScript: JSON
-
-### Summary
-
-### Exercises
-
-### Extra Resources
-
-  _(Nothing here yet. Feel free to contribute if you've found some useful resources.)_
-
-### Sources and Attributions
+<!-- TODO: Keep this structure and create SGEN feature for link creation of units/modules -->
 
 
-
+- [Read: **Introduction to Promises**](../modules/javascript/async/promises/30-days-of-javascript/index.md){:target="_blank"}
 
 <!-- Summary -->
 
@@ -89,7 +119,60 @@ title: Week 11 | Web APIs 2: Promises, JSON, Fetch API, Web Storage, Media
 
   _(Nothing here yet. Feel free to contribute if you've found some useful resources.)_
 
-<!-- Sources and Attributions -->
+### Sources and Attributions
+
+  **Content is based on the following sources:**
+
+  - [30 Days Of JavaScript: Promises](https://github.com/in-tech-gration/30-Days-Of-JavaScript/blob/master/18_Day_Promises/18_day_promises.md){:target="_blank"} [(Permalink)](https://github.com/in-tech-gration/30-Days-Of-JavaScript/blob/55d8e3dbc0410d64c1dc3ea5915e015a7950cf2a/18_Day_Promises/18_day_promises.md){:target="_blank"}
+
+  Don't forget to star this awesome [repo](https://github.com/Asabeneh/30-Days-Of-JavaScript){:target="_blank"}!
+  
+</details>
+
+<hr class="mt-1">
+
+<!-- Week 11 - Day 3 | Introduction to Fetch API -->
+<details markdown="1">
+  <summary>
+    <h2>
+      <span class="summary-day">Week 11 - Day 3</span> | Introduction to Fetch API</h2>
+  </summary>
+
+### Schedule
+
+  - [Study](#study-plan-NN)
+  - [Exercises](#exercises-NN)
+  - [Extra Resources](#extra-resources-NN)
+
+### Study Plan
+
+<!-- TODO: Keep this structure and create SGEN feature for link creation of units/modules -->
+
+
+- [Read: **Introduction to JSON**](../modules/javascript/web_apis/fetch/30-days-of-javascript/index.md){:target="_blank"}
+
+<!-- Summary -->
+
+### Exercises
+
+  Copy the [fetch.js](./exercises/fetch.js) file and load it on an HTML file called `fetch.html` and compete all the challenges found inside.
+
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week11/progress/progress.draft.w11.d03.csv**
+
+  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
+
+### Extra Resources
+
+  _(Nothing here yet. Feel free to contribute if you've found some useful resources.)_
+
+### Sources and Attributions
+
+  **Content is based on the following sources:**
+
+  - [30 Days Of JavaScript: Promises](https://github.com/in-tech-gration/30-Days-Of-JavaScript/blob/master/18_Day_Promises/18_day_promises.md){:target="_blank"} [(Permalink)](https://github.com/in-tech-gration/30-Days-Of-JavaScript/blob/55d8e3dbc0410d64c1dc3ea5915e015a7950cf2a/18_Day_Promises/18_day_promises.md){:target="_blank"}
+
+  Don't forget to star this awesome [repo](https://github.com/Asabeneh/30-Days-Of-JavaScript){:target="_blank"}!
   
 </details>
 
