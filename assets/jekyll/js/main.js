@@ -76,4 +76,22 @@ $(function() {
     }
   });
 
+  const themeMode = localStorage.getItem("wdx-theme");
+  if ( themeMode === "dark-theme" ){
+    $(document.body).addClass("dark-theme");
+    $("#theme-toggler #toggle").prop("checked", true);
+  }
+
+  $("#theme-toggler #toggle").on("change", e =>{
+
+    $(document.body).toggleClass("dark-theme");
+
+    if ( localStorage.getItem("wdx-theme") === "dark-theme" ){
+      localStorage.removeItem("wdx-theme");
+    } else {
+      localStorage.setItem("wdx-theme", "dark-theme");
+    }
+
+  });
+
 });
