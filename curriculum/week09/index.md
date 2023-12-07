@@ -24,7 +24,7 @@ title: Week 09 | JavaScript Core 3
 
   </h2>
 
-  <span>Updated: 6/12/2023</span>
+  <span>Updated: 7/12/2023</span>
 
   <h2 class="week-controls__next_week">
 
@@ -286,6 +286,8 @@ title: Week 09 | JavaScript Core 3
 
 ### Study Plan
 
+  - Watch [**Introduction to JavaScript Objects**](https://www.youtube.com/watch?v=OJBlJI1vEK8){:target="_blank"} to get a very basic idea of the Object structure in JavaScript, then move on with the rest of the material that includes objects in several cases.
+
   Make sure to follow the guides on **Setting up Study Lenses (v2) on your System**. Once `lenses2` is properly installed on your system, you can go to your `WDX-180` folder and run `lenses2` with the material for this Module:
 
   - `cd WDX-180/`
@@ -296,7 +298,6 @@ title: Week 09 | JavaScript Core 3
   - **1-isolate**
   - **2-practice**
   - **3-implicit-return**
-  - **4-integrate**
 
   > **REMINDER:** You should never create, delete or modify any files or folders outside the `user/` directory. If the Module you are studying contains exercise files and folders, they should be copied over to the `user/` folder and modified there. 
 
