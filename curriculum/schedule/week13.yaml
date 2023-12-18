@@ -6,7 +6,7 @@ schedule:
     1: # ES6
       # file://./../modules/javascript/
       module: javascript/
-    2: # More ES6
+    2: # More ES6 (Promise.all/allSettled/new Promise)
       # file://./../modules/javascript/
       module: javascript/
     3: # The Power of Functions
@@ -44,3 +44,6 @@ schedule:
 # > https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 # > https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 # > https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype
+
+# DAY 3: Callbacks
+# dendron.docs/notes/JS.FUNCTIONS.md => ## FUNCTIONS | CALLBACKS
