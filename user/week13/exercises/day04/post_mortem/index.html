@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Mortem #1</title>
+</head>
+
+<body>
+
+  <!-- EXPECTED HTML: What we want to see -->
+  <!-- 
+    <h1>
+      SUNT AUT FACERE REPELLAT PROVIDENT OCCAECATI EXCEPTURI OPTIO REPREHENDERIT
+    </h1> 
+  -->
+
+  <pre>
+    Instructions:
+
+    - There's something wrong in here
+    - Debug and trace any errors
+    - Write a post mortem report
+
+    Report:
+
+    - ERROR: Error message and short description
+    - FIX: How you were able to detect and fix
+    - AVOID: How to avoid the same error in the future
+
+    - ERROR: on line where is the end of second then() there is an error in vscode: 'Declaration or statement expected.javascript'. Seems like a misleading error.
+    - FIX: you cant chain functions if you use ';' at the end of the functions between so i deleted ';' from line 51
+    - AVOID: using ';' at the end of then() because there is a chain function statement
+
+    - ERROR: at the dev tools console i get error 'TypeError: Cannot read properties of undefined (reading '0')'
+    - FIX: I opened the dev tools console and TypeError at index.html:56:37. 
+           If the program can't find the data holding the 0 index then i have to find out why i can't get the data.
+           I putted a console.log(data) in line 57 but i got no data, still undefined.
+           So i looked at the colde of first then() and putted a console.log after res.json(); so i can see if i get the data from the API.
+           I got an object so i tried with console.log(res.status) and i got 200 so the response is ok.
+           Looking the syntax closer there is a mistake returning the response in the then() function.
+           I should either remove the {} curly bracers before and after res.json(); or add a return right before res.json();
+           So i added the return before res.json; and tried console.log(data) before  const firstPostTile = data[0].title;
+           I got all the data so i tried to remove 
+            the return before res.json(),
+            the {} curly bracers before and after res.json() 
+            ';' after res.json()
+           and i still get data in my console.log but in my html i get {title} and not the actual value
+           So i opened dev tools and targeted {title} word in the page to check what is the value. The value was {title} 
+           instead of the value of the title from the data. The $ symbol is missing from the syntax. It should be ${title}.
+           Changed {title} to ${title}. in third then().but the html is 
+           <!-- <h1>SUNT AUT FACERE REPELLAT PROVIDENT OCCAECATI EXCEPTURI OPTIO REPREHENDERIT</h1> -->
+           and not 
+          <!--  
+          <h1>
+            SUNT AUT FACERE REPELLAT PROVIDENT OCCAECATI EXCEPTURI OPTIO REPREHENDERIT
+          </h1>
+           --> 
+           So i changed document.body.innerHTML += `<h1>${title}</h1>`
+           to 
+           document.body.innerHTML += `
+           <h1>
+             ${title}
+           </h1>
+           `;
+           and the result is 
+             <!-- 
+              <h1>
+                SUNT AUT FACERE REPELLAT PROVIDENT OCCAECATI EXCEPTURI OPTIO REPREHENDERIT
+              </h1> 
+            -->
+
+    - AVOID: 
+      adding ';' after each then()
+      missing $ before {} to get variable values
+      returning response
+
+   
+  </pre>
+
+  <!--
+
+    Old code 
+
+    function initializeApp(){
+
+      console.log("Launching app...");
+
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then(res => {
+          // Let's grab the JSON response from the API:
+          res.json();
+        })
+        .then(data => {
+          const firstPostTile = data[0].title;
+          const firstPostTitleUpperCase = firstPostTile.toUpperCase();
+          return firstPostTitleUpperCase;
+        });
+        .then(title => {
+          document.body.innerHTML += `<h1>{title}</h1>`
+        })
+        .catch( e => console.log(e) );
+
+    }
+
+    initializeApp();
+
+  -->
+
+  <!-- fixed code -->
+  <script>
+    function initializeApp(){
+
+      console.log("Launching app...");
+
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then(res => 
+          // Let's grab the JSON response from the API:
+          res.json()
+        )
+        .then(data => {
+          const firstPostTile = data[0].title;
+          const firstPostTitleUpperCase = firstPostTile.toUpperCase();
+          return firstPostTitleUpperCase;
+        })
+        .then(title => {
+          document.body.innerHTML += `
+            <h1>
+              ${title}
+            </h1>
+            `;
+        })
+        .catch( e => console.log(e) );
+
+    }
+
+    initializeApp();
+  </script>
+</body>
+
+</html>
