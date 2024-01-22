@@ -1,37 +1,37 @@
 ---
-title: Week 14 | Intermediate JavaScript
+title: Week 15 | Intermediate JavaScript
 ---
 
 <hr class="mb-0">
 
-<h1 id="{{ Week 14-Intermediate JavaScript | slugify }}">
-  <span class="week-prefix">Week 14 |</span> Intermediate JavaScript
+<h1 id="{{ Week 15-Intermediate JavaScript | slugify }}">
+  <span class="week-prefix">Week 15 |</span> Intermediate JavaScript
 </h1>
 
 <div class="week-controls">
 
-  {% assign week_num = 14 | to_integer %}
+  {% assign week_num = 15 | to_integer %}
 
   <h2 class="week-controls__previous_week">
 
     <!-- ADD CHECK FOR WEEK open:true (remove if false) -->
     {% if week_num > 0 %}
 
-      {% assign previous_week_num = 14 | to_integer | minus: 1 | prepend: '00' | slice: -2, 2 %}
+      {% assign previous_week_num = 15 | to_integer | minus: 1 | prepend: '00' | slice: -2, 2 %}
 
       <a href="../week{{ previous_week_num }}">Week {{ previous_week_num }} &#8678;</a>
     {% endif %}
 
   </h2>
 
-  <span>Updated: 14/1/2024</span>
+  <span>Updated: 21/1/2024</span>
 
   <h2 class="week-controls__next_week">
 
     <!-- ADD CHECK FOR WEEK open:true (remove if false) -->
-    {% if week_num <= 36 %}
+    {% if false and week_num <= 36 %}
 
-      {% assign next_week_num = 14 | to_integer | plus: 1 | prepend: '00' | slice: -2, 2 %}
+      {% assign next_week_num = 15 | to_integer | plus: 1 | prepend: '00' | slice: -2, 2 %}
 
       <a href="../week{{ next_week_num }}">&#8680; Week {{ next_week_num }}</a>
     {% endif %}
@@ -42,11 +42,11 @@ title: Week 14 | Intermediate JavaScript
 
 ---
 
-<!-- Week 14 - Day 1 | Intermediate JavaScript -->
+<!-- Week 15 - Day 1 | Intermediate JavaScript -->
 <details markdown="1">
   <summary>
     <h2>
-      <span class="summary-day">Week 14 - Day 1</span> | Intermediate JavaScript</h2>
+      <span class="summary-day">Week 15 - Day 1</span> | Intermediate JavaScript</h2>
   </summary>
 
 ### Schedule
@@ -69,11 +69,11 @@ title: Week 14 | Intermediate JavaScript
 
 <hr class="mt-1">
 
-<!-- Week 14 - Day 2 | Group Project -->
+<!-- Week 15 - Day 2 | Group Project -->
 <details markdown="1">
   <summary>
     <h2>
-      <span class="summary-day">Week 14 - Day 2</span> | Group Project</h2>
+      <span class="summary-day">Week 15 - Day 2</span> | Group Project</h2>
   </summary>
 
 ### Schedule
@@ -94,11 +94,11 @@ title: Week 14 | Intermediate JavaScript
 
 <hr class="mt-1">
 
-<!-- Week 14 - Day 3 | Intermediate JavaScript -->
+<!-- Week 15 - Day 3 | Intermediate JavaScript -->
 <details markdown="1">
   <summary>
     <h2>
-      <span class="summary-day">Week 14 - Day 3</span> | Intermediate JavaScript</h2>
+      <span class="summary-day">Week 15 - Day 3</span> | Intermediate JavaScript</h2>
   </summary>
 
 ### Schedule
@@ -121,11 +121,11 @@ title: Week 14 | Intermediate JavaScript
 
 <hr class="mt-1">
 
-<!-- Week 14 - Day 4 | Group Project -->
+<!-- Week 15 - Day 4 | Group Project -->
 <details markdown="1">
   <summary>
     <h2>
-      <span class="summary-day">Week 14 - Day 4</span> | Group Project</h2>
+      <span class="summary-day">Week 15 - Day 4</span> | Group Project</h2>
   </summary>
 
 ### Schedule
@@ -146,11 +146,11 @@ title: Week 14 | Intermediate JavaScript
 
 <hr class="mt-1">
 
-<!-- Week 14 - Day 5 | Intermediate JavaScript -->
+<!-- Week 15 - Day 5 | Intermediate JavaScript -->
 <details markdown="1">
   <summary>
     <h2>
-      <span class="summary-day">Week 14 - Day 5</span> | Intermediate JavaScript</h2>
+      <span class="summary-day">Week 15 - Day 5</span> | Intermediate JavaScript</h2>
   </summary>
 
 ### Schedule
