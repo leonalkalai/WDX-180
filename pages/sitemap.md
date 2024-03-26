@@ -18,6 +18,9 @@ favicon: sitemap.png
       - [DOM Selectors Practice](https://in-tech-gration.github.io/WDX-180//curriculum/modules/javascript/web_apis/dom/exercises/dom-selectors/index.html){:target="_blank"}
       - [Promise Refactoring](https://in-tech-gration.github.io/WDX-180/curriculum/modules/javascript/async/async_await/exercises/promise_refactoring/){:target="_blank"}
       - [The Tweeter Frontend Challenge](https://in-tech-gration.github.io/WDX-180/curriculum/modules/javascript/misc/tweeter_practice/){:target="_blank"}
+      - **React**
+        - [Simple Quiz](https://in-tech-gration.github.io/WDX-180/curriculum/modules/javascript/frameworks/react/exercises/simple-quiz/){:target="_blank"}
+        - [React Commerce Challenge](https://in-tech-gration.github.io/WDX-180/curriculum/modules/javascript/frameworks/react/exercises/react-commerce-challenge/){:target="_blank"}
 
   - **Modules**
     - **JavaScript**
