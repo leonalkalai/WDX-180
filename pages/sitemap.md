@@ -15,7 +15,8 @@ favicon: sitemap.png
     - **CSS**
       - [CSS Selectors Practice](https://in-tech-gration.github.io/WDX-180/curriculum/modules/css/selectors/exercises/fix_the_summary/index.html){:target="_blank"}
     - **JavaScript**
-      - [DOM Selectors Practice](https://in-tech-gration.github.io/WDX-180//curriculum/modules/javascript/web_apis/dom/exercises/dom-selectors/index.html){:target="_blank"}
+      - [Web Scraping for AI](https://in-tech-gration.github.io/WDX-180/curriculum/modules/javascript/web_apis/dom/exercises/scraping-for-AI/)
+      - [DOM Selectors Practice](https://in-tech-gration.github.io/WDX-180/curriculum/modules/javascript/web_apis/dom/exercises/dom-selectors/index.html){:target="_blank"}
       - [Promise Refactoring](https://in-tech-gration.github.io/WDX-180/curriculum/modules/javascript/async/async_await/exercises/promise_refactoring/){:target="_blank"}
       - [The Tweeter Frontend Challenge](https://in-tech-gration.github.io/WDX-180/curriculum/modules/javascript/misc/tweeter_practice/){:target="_blank"}
       - **React**
@@ -40,12 +41,20 @@ favicon: sitemap.png
       - [CSS: Simple Animation](https://in-tech-gration.github.io/WDX-180/curriculum/modules/css/tips/simple_animation/){:target="_blank"} (CSS tips simple animation)
       - [HTML: The download attribute](https://in-tech-gration.github.io/WDX-180/curriculum/modules/html/attributes/download_short/){:target="_blank"} (HTML attributes download)
       - [JS: Array.at()](https://in-tech-gration.github.io/WDX-180/curriculum/modules/javascript/core/arrays/methods_shorts/at/){:target="_blank"} (JS methods arrays at)
+    - **Artificial Intelligence**
+      - **LLMs**
+        - [What is an LLM?](https://in-tech-gration.github.io/WDX-180/curriculum/modules/computer_science/artificial_intelligence/llm/what_is_an_llm/index.html)
+        - [Ollama](https://in-tech-gration.github.io/WDX-180/curriculum/modules/computer_science/artificial_intelligence/llm/ollama/quickstart/quickstart.html)
+        - [LangChain](https://in-tech-gration.github.io/WDX-180/curriculum/modules/computer_science/artificial_intelligence/llm/langchain/index.html)
 
   - **YouTube**
     - **Playlists**
       - [Flappy Bird](https://www.youtube.com/playlist?list=PLdo7hJB0agEmTY9xT7EvzUkClAeAHJr9G){:target="_blank"}
       - [Real-life coding](https://www.youtube.com/playlist?list=PLdo7hJB0agElB29_USaEp_wtd2cPuD71C){:target="_blank"}
   
+  - **Tools & Interactive Environments**
+    - [JSLinux (Linux in the Browser)](https://in-tech-gration.github.io/WDX-180/resources/vm/jslinux/index.html)
+
   - **Training Wheels**
     - [About](https://in-tech-gration.github.io/WDX-180/curriculum/modules/training-wheels/why-training-wheels){:target="_blank"}
     - **Functions**

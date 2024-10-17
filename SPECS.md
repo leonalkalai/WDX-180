@@ -37,6 +37,10 @@
   >
   > If you want Jekyll to process any of these files, you can use the include setting in your configuration file. (_config.yml)
 
+## Jekyll | How to | Update & Compile the Home Page?
+
+  - Run: `sgen pages/README.yaml` from the root directory.
+
 ## Jekyll | How to | Change Website Styling (CSS)
 
   Edit the following file:
@@ -202,6 +206,14 @@
 
   > Add the following line to the Frontmatter section:
   - animated.bubbles.js
+
+## Jekyll | How to | Embed YouTube Videos?
+
+  _(work in progress)_
+
+## Jekyll | How to | Add a Header Image for each Week?
+
+  In the yaml file (e.g. `week13.yaml`) add a new YAML property named `header_image:` and add the full path. The `sgen` tool will automatically detect the image path and will copy the file to the appropriate weekly folder.
 
 ---
 

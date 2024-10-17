@@ -12,10 +12,14 @@ title: Ollama Quickstart
 
   `Ollama` is a software for installing and running Large Language Models (LLMs) on your machine. It can run `Llama 3`, `Phi3`, `Mistral`, `Gemma` and other models. It also allows you to create your own.
 
+  - Watch [Ollama In 120 Seconds](https://www.youtube.com/watch?v=_6SlPLNEpzQ){:target="_blank"} to get a quick overview of the application and its features.
+
   - Download and install [**Ollama**](https://ollama.com/)
     - Visit [https://ollama.com](https://ollama.com) => Click **Download** => Select your OS and click "Download for Mac/Linux/Windows"
 
   After installing `Ollama`, it will be available via the command line as `ollama`. You can test whether the command was successfully installed by opening up a terminal and typing `ollama --version`. You can also run the `ollama --help` command to see the available options.  
+
+  > "The model will automatically be unloaded from memory after 5 minutes of inactivity."
 
 ## RUNNING OUR FIRST MODEL: Phi3
 
@@ -67,6 +71,70 @@ title: Ollama Quickstart
   You can exit the Ollama prompt `(>>>)` by typing `/bye`. Keep in mind that Ollama server will keep running in the background. You can check this by opening up `http://localhost:11434` in the browser. You can stop the server by selecting the `Quit Ollama` option from the Ollama app running on your machine.
 
   You can read more about `Phi3` by checking the links found in the [`Extra Resources`](#extra-resources) section.
+
+## RUNNING A MULTI-MODAL LLM
+
+  What is a `Multi-modal LLM` _(`MM-LLM`)_, you might ask? Simply, it's a chat model that can accept images, audio and event video along with text as input. You can ask questions but you can also share media files and ask questions about them as well. Here's how to install one such model locally and start asking questions about media files.
+
+  Download the [bakllava](#) MM-LLM model by running the following command:
+
+  - `ollama pull bakllava`
+
+  Check that the model has been downloaded and shows up on the list of the local models:
+
+  - `ollama list`
+
+  You'll get an output like this:
+
+  ```bash
+  NAME            ID              SIZE    MODIFIED    
+  bakllava 3dd68bd4447c    4.7 GB  1 minute ago
+  ```
+
+  Now, let's run the bakllava model:
+
+  - `ollama run bakllava`
+
+  Your `bakllava` model should be running now and you can start chatting via the special command line prompt:
+
+  ```bash
+  >>> Send a message (/? for help)
+  ```
+
+  You can also check that Ollama is running by running the `ollama ps` command or opening up the Ollama web server in the browser: `http://localhost:11434`.
+
+  Now, you are ready to chat with the model offline and also ask it to answer questions related to media files that you share through the local filepath:
+
+  ```bash
+  >>> What is depicted in this image? /Users/Downloads/Plants/mountain_flower.jpg
+  Added image '/Users/Downloads/Plants/mountain_flower.jpg'
+  The image features a purple flower, which is part of a plant growing in the wild. It is surrounded by lush green foliage and is sitting 
+  prominently against a white background.
+  ```
+
+  **Note:** Make sure to run the `/clear` command before using another image.
+
+## TESTING A MULTI-MODAL LLM WITH CCTV FOOTAGE 
+
+  Let's test some of the available MM-LLMs out there with footage captured from CCTV somewhere in the UK. In the YouTube video below, you'll see footage that captures a burglary suspect escaping through a house that has CCTV installed.
+
+  <iframe width="100%" height="500" src="https://www.youtube.com/embed/AKOnSEDDzDM?si=z4enwb-_eZRbxz0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <!-- In the following video, you can see how we can test various MM-LLMs on several screen captures from the video footage to identify an individual inside the premises. -->
+
+  Here are the models that can be tested on screenshots captured from various frames in the video:
+
+  - [llava:13b](https://ollama.com/library/llava){:target="_blank"}
+  - [bakllava:7b](https://ollama.com/library/bakllava){:target="_blank"}
+
+  You can download the screen captures from the [GitHub repository](https://github.com/in-tech-gration/WDX-180/tree/main/curriculum/modules/computer_science/artificial_intelligence/llm/ollama/quickstart/assets/burglary/).
+
+  Here are some ideas for prompts:
+
+  - Is there an individual? Answer with: Yes, No (Maybe).
+  - List the objects found in the picture.
+
+<!-- TODO: ## CREATING A CUSTOM OLLAMA MODEL -->
 
 ## FAQ
 
