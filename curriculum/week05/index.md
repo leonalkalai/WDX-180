@@ -23,7 +23,7 @@ title: Week 05 | CSS Frameworks
 
   </h2>
 
-  <span>Updated: 16/11/2023</span>
+  <span>Updated: 8/11/2024</span>
 
   <h2 class="week-controls__next_week">
 
@@ -191,8 +191,6 @@ We are basically creating a single `<input>` form field of type `text`. In the s
   All the videos can be found on this [**YouTube playlist**](https://www.youtube.com/playlist?list=PLdo7hJB0agEmTY9xT7EvzUkClAeAHJr9G).
 
   Good luck!
-
-  __*Please do not share the link with anyone outside of intechgration.io__
 
   **The Videos**
 
@@ -382,8 +380,8 @@ We are basically creating a single `<input>` form field of type `text`. In the s
 ### Schedule
 
   - [Study](#study-plan-NN)
-  - [Exercises](#exercises-NN)
-  - [Extra Resources](#extra-resources-NN)
+  <!-- - [Exercises](#exercises-NN) -->
+  <!-- - [Extra Resources](#extra-resources-NN) -->
 
 ### Study Plan
 
@@ -413,8 +411,8 @@ We are basically creating a single `<input>` form field of type `text`. In the s
 ### Schedule
 
   - [Study](#study-plan-NN)
-  - [Exercises](#exercises-NN)
-  - [Extra Resources](#extra-resources-NN)
+  <!-- - [Exercises](#exercises-NN) -->
+  <!-- - [Extra Resources](#extra-resources-NN) -->
 
 ### Study Plan
 
@@ -444,8 +442,8 @@ We are basically creating a single `<input>` form field of type `text`. In the s
 ### Schedule
 
   - [Study](#study-plan-NN)
-  - [Exercises](#exercises-NN)
-  - [Extra Resources](#extra-resources-NN)
+  <!-- - [Exercises](#exercises-NN) -->
+  <!-- - [Extra Resources](#extra-resources-NN) -->
 
 ### Study Plan
 
