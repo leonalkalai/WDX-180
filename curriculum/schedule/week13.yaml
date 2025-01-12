@@ -12,8 +12,8 @@ schedule:
       # file://./../modules/javascript/web_apis/cssom/intro/index.md
       module: javascript/web_apis/cssom/intro/
     3: # Intermediate JavaScript
-      # file://./../modules/javascript/misc/_w13d03.md
-      module: javascript/misc/_w13d03.md
+      # file://./../modules/javascript/misc/_w13d03/_w13d03.md
+      module: javascript/misc/_w13d03/_w13d03.md
     4: # Advanced CSS Sorcery + JavaScript 
       # file://./../modules/css/misc/advanced_css/index.md
       module: css/misc/advanced_css/
@@ -24,6 +24,9 @@ schedule:
 # ---
 
 # DAY 1: ES6 refers to the features that were added to the JavaScript programming language in the 6th Edition of the ECMAScript standard (ES6 for short).
+
+# DAY 1: Evaluating: https://github.com/in-tech-gration/promises-exercises
+# git clone => npq i => npm run 01-making-promises => All good!
 
 # DAY 1: TODO: You are now grown-ups, so let's recommend some cool tools to add to your arsenal:
 # https://chrome.google.com/webstore/detail/30-seconds-of-knowledge/mmgplondnjekobonklacmemikcnhklla

@@ -12,10 +12,15 @@ title: Just Enough JavaScript - Part 2
 
   In this Module, we are continuing our journey into "Just enough JavaScript".
 
-  Make sure to follow the guides on **Setting up Study Lenses (v2) on your System** and **Launching Study Lenses and following the material** from Day 01 and then go through the following sections:
+  Make sure to follow the guides on {{ SGEN:MODULE_LINK:javascript/denepo/setting-up-study-lenses/index.md }} and **Launching Study Lenses and following the material** from Part 1 and then go through the following sections:
 
   - **07-variables**
   - **08-null**
+
+  Here's a reminder on how to launch `study lenses`:
+
+  - `cd WDX-180/`
+  - `lenses2 curriculum/modules/javascript/denepo/_just-enough-javascript/`
 
 ### Summary
 

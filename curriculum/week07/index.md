@@ -23,7 +23,7 @@ title: Week 07 | JavaScript Core 1
 
   </h2>
 
-  <span>Updated: 8/11/2024</span>
+  <span>Updated: 18/11/2024</span>
 
   <h2 class="week-controls__next_week">
 
@@ -46,6 +46,8 @@ title: Week 07 | JavaScript Core 1
     <h2>
       <span class="summary-day">Week 07 - Day 1</span> | Just Enough JavaScript - Part 1</h2>
   </summary>
+
+![](./assets/learning.with.study.lenses.jpg)
 
 ### Schedule
 
@@ -125,6 +127,11 @@ title: Week 07 | JavaScript Core 1
   - **07-variables**
   - **08-null**
 
+  Here's a reminder on how to launch `study lenses`:
+
+  - `cd WDX-180/`
+  - `lenses2 curriculum/modules/javascript/denepo/_just-enough-javascript/`
+
 <!-- Summary -->
 
 <!-- Exercises -->
@@ -163,6 +170,11 @@ title: Week 07 | JavaScript Core 1
   - **11-block-scope**
   - **12-conditionals**
 
+  Here's a reminder on how to launch `study lenses`:
+
+  - `cd WDX-180/`
+  - `lenses2 curriculum/modules/javascript/denepo/_just-enough-javascript/`
+
 <!-- Summary -->
 
 <!-- Exercises -->
@@ -198,6 +210,11 @@ title: Week 07 | JavaScript Core 1
 
   - **13-while-loops**
   - **14-review-quiz**
+
+  Here's a reminder on how to launch `study lenses`:
+
+  - `cd WDX-180/`
+  - `lenses2 curriculum/modules/javascript/denepo/_just-enough-javascript/`
 
 <!-- Summary -->
 
@@ -236,6 +253,11 @@ title: Week 07 | JavaScript Core 1
   - **16-break**
   - **17-continue**
 
+  Here's a reminder on how to launch `study lenses`:
+
+  - `cd WDX-180/`
+  - `lenses2 curriculum/modules/javascript/denepo/_just-enough-javascript/`
+
 <!-- Summary -->
 
 <!-- Exercises -->
@@ -252,6 +274,8 @@ title: Week 07 | JavaScript Core 1
 <hr class="mt-1">
 
 **Weekly feedback:** Hey, it's really important for us to know how your experience with the course has been so far, so don't forget to fill in and submit your [**mandatory** feedback form](https://forms.gle/S6Zg3bbS2uuwsSZF9){:target="_blank"} before the day ends. Thanks you!
+
+
 
 ---
 

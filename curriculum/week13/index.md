@@ -25,7 +25,7 @@ title: Week 13 | Intermediate JavaScript
 
   </h2>
 
-  <span>Updated: 17/10/2024</span>
+  <span>Updated: 9/1/2025</span>
 
   <h2 class="week-controls__next_week">
 
@@ -42,17 +42,18 @@ title: Week 13 | Intermediate JavaScript
 
 ---
 
-<!-- Week 13 - Day 1 | Intermediate JavaScript -->
+<!-- Week 13 - Day 1 | JavaScript Promises -->
 <details markdown="1">
   <summary>
     <h2>
-      <span class="summary-day">Week 13 - Day 1</span> | Intermediate JavaScript</h2>
+      <span class="summary-day">Week 13 - Day 1</span> | JavaScript Promises</h2>
   </summary>
 
 ### Schedule
 
-  - **Lecture: Intermediate JavaScript**
+  - **Lecture: JavaScript Promises**
   - **Practice**
+  - **Exercises**
   - **Work on Project (Group/Personal)**
 
 ### Study Plan
@@ -73,9 +74,35 @@ title: Week 13 | Intermediate JavaScript
 
   _(Image from [https://www.alexlintu.com/what-is-a-promise/](https://www.alexlintu.com/what-is-a-promise/){:target="_blank"})_
 
+  **Resources**
+
+  - Servers that return JSON data:
+    - [Chuck Norris Jokes](https://api.chucknorris.io/jokes/random){:target="_blank"}
+    - [Cat Facts](https://catfact.ninja/fact){:target="_blank"}
+
+  - Lectures Code:
+    - [Promises](./assets/intechgration-io-promises.zip){:target="_blank"}
+    - [Functions: The Chickend and the Eff](./assets/intechgration-io-functions-chicken-egg.zip){:target="_blank"}
+
+  - Lectures Diagrams:
+    - [Promises (in real life)](./assets/1_2lVkfUxpad7Y_2Y0K3ToLQ.png){:target="_blank"}
+    - [Promises (states)](./assets/Ekran-Resmi-2020-06-06-12.21.27.png){:target="_blank"}
+    - [Promises (states)](./assets/1_3S0Y1DQJe-NsUXHdNl8gHg.png){:target="_blank"}
+    - [Definition of 'Pending'](./assets/Google.Define.Pending.jpg){:target="_blank"}
+    - [Excalidraw](./assets/Promise.Diagram.png){:target="_blank"}
+    - [Server-Client Headers](./assets/Server.Client.Headers.png){:target="_blank"}
+
 <!-- Summary -->
 
-<!-- Exercises -->
+### Exercises
+
+  Finish all the exercises found on this [repository](https://github.com/in-tech-gration/promises-exercises){:target="_blank"}.
+
+
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week13/progress/progress.draft.w13.d01.csv**
+
+  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
 
 <!-- Extra Resources -->
 
@@ -178,26 +205,97 @@ title: Week 13 | Intermediate JavaScript
 
 <hr class="mt-1">
 
-<!-- Week 13 - Day 3 | Intermediate JavaScript -->
+<!-- Week 13 - Day 3 | Promises & Scope -->
 <details markdown="1">
   <summary>
     <h2>
-      <span class="summary-day">Week 13 - Day 3</span> | Intermediate JavaScript</h2>
+      <span class="summary-day">Week 13 - Day 3</span> | Promises & Scope</h2>
   </summary>
 
 ### Schedule
 
-  - **Lecture: Intermediate JavaScript**
+  - **Lecture: Promises & Scope**
   - **Practice**
   - **Work on Project (Group/Personal)**
 
-<!-- Study Plan -->
+### Study Plan
 
-<!-- Summary -->
+  ![](./assets/Knock.Knock.png)
 
-<!-- Exercises -->
+  Your instructor will share the video lectures with you. The first part of the lecture is about Promises and error handling, while the second part is all about `scope` in JavaScript and different ways to define variables.  
 
-<!-- Extra Resources -->
+  > A new term needs a proper Google search for its original definition:
+  > 
+  > **Scope:** *“the extent of the area or subject matter that something deals with or to which it is relevant.”*  
+  > *Example: "we widened the scope of our investigation"*  
+
+
+
+  - **Recommended reading:** read the full articles about [var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var){:target="_blank"}, [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let){:target="_blank"} and [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const){:target="_blank"} on MDN and share your questions on our Slack forum or leave a comment below.
+
+### Summary
+
+  Here is an AI-generated summary of the lectures:
+
+  **Lecture 1: Promises**
+
+  1. **Creating promises**: The instructor explains how to create promises using the `Promise` constructor and provides examples.
+
+  2. **Handling promise errors**: He demonstrates how to handle promise errors using `.catch()` or `.finally()`.
+
+  3. **Chaining promises**: The discussion covers chaining promises together using the `.then()` method.
+
+  4. **Combining promises**: The instructor shows how to combine multiple promises into a single promise using methods like `Promise.all()` and `Promise.race()`.
+
+  5. **Performance measurement**: He mentions the importance of measuring performance in JavaScript and provides a link to an MDN API for timing functions.
+
+  6. **Timing promise execution**: The discussion highlights that there's no way to guarantee the exact time it takes for promises to execute, even on the same machine.
+
+  The meeting also touches upon related topics, such as:
+
+  * Creating arrow functions with single statements
+  * Combining multiple promise-based functions into a single function
+
+  **Lecture 2: Scope**
+
+  1. The concept of scope in JavaScript is important to understand.
+
+  2. There are different types of scope: global, function, and block scope.
+
+  3. Variables declared with `var` have function scope, while variables declared with `let` or `const` have block scope.
+
+  4. Lexical scoping (also known as static scoping) is a way of resolving variable references in JavaScript.
+
+  5. It's not necessary to know the term "lexical scoping" to understand how scope works in JavaScript; just learn the rules and you'll be fine.
+
+  6. Naming variables can help with understanding scope, especially when working with complex code.
+
+### Exercises
+
+  - Practice with Promises and what you've learned from the lectures
+
+  - Study the behavior of the following code, and make sure to understand the mechanics behind it and be able to explain this during a coding interview (practice by explaining this to an imaginary person or to a class mate):
+
+  ```js
+  console.log(a);
+  var a = 42;
+  console.log(a);
+
+  console.log(b);
+  let b = 42;
+  console.log(b);
+  ```
+
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week13/progress/progress.draft.w13.d03.csv**
+
+  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
+
+### Extra Resources
+
+  - [Measuring performance](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now){:target="_blank"} (Performance.now())
+
+  - [Page Marker: Draw on the Web Chrome Extension](https://chromewebstore.google.com/detail/page-marker-draw-on-web/jfiihjeimjpkpoaekpdpllpaeichkiod){:target="_blank"}
 
 <!-- Sources and Attributions -->
   
@@ -259,7 +357,38 @@ title: Week 13 | Intermediate JavaScript
 
   On top of that, you want to create a page that includes every single feature with a small description taken from the MDN docs and a small example (containing both the code used and the actual displayed output).
 
-<!-- Exercises -->
+### Exercises
+
+  - Build a replica of the [**var/let/const table**](./assets/var-let-const.jpg){:target="_blank"} using HTML and CSS. Sprinkle the table with some JavaScript if you feel like it.
+
+  ![](./assets/var-let-const.jpg)
+
+  You can use some emojis for the ❌ and ✅ or you can recreate them using plain CSS!
+
+  - [Check Mark](https://emojipedia.org/check-mark-button){:target="_blank"}
+  - [Cross Mark](https://emojipedia.org/cross-mark){:target="_blank"}
+
+  If you go with the CSS route for the symbols, you can use the following HTML entities
+  and find some CSS rules to apply colors, background, borders, circles, etc. to these characters
+
+
+  - `<span>&check;</span>`
+  - `<span>&CircleTimes;</span>`
+
+  Refs:
+
+
+  - [Unicode Character “⊗” (U+2297)](https://www.compart.com/en/unicode/U+2297){:target="_blank"}
+  - [Unicode Character “✓” (U+2713)](https://www.compart.com/en/unicode/U+2713){:target="_blank"}
+
+  You can of course, build the structure in many ways, but the `<table>` element is the most appropriate here.
+  In case you've started building using another element, feel free to do so, and we'll check how different layouts
+  and structure look later on.
+
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week13/progress/progress.draft.w13.d04.csv**
+
+  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
 
 ### Extra Resources
 
@@ -286,11 +415,29 @@ title: Week 13 | Intermediate JavaScript
   - **Practice**
   - **Work on Project (Group/Personal)**
 
-<!-- Study Plan -->
+### Study Plan
+
+  Your instructor will share the video lectures with you. Here are the topics covered:
+
+  - **Part 1**:
+    - Variable scope and use of the `window` object as a global namespace.
+    - Naming variables in a way that shows intent and protects our code
+  - **Part 2**:
+    - Variable declarations, function definitions and function expressions
+    - Scoping rules
+
+  Practice on the topics covered and explore the concepts by trying things out in your own code.
 
 <!-- Summary -->
 
-<!-- Exercises -->
+### Exercises
+
+<!-- ### Extra Resources -->
+
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week13/progress/progress.draft.w13.d05.csv**
+
+  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
 
 <!-- Extra Resources -->
 
